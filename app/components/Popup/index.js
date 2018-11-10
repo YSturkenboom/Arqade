@@ -9,6 +9,7 @@ class Popup extends Component {
     this.state = {
       visible: true,
       seconds: 0,
+      // finished: false,
       maxSeconds: 7,
     };
   }

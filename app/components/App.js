@@ -12,6 +12,8 @@ import vinylLogo from '../assets/images/vinyl_logo.png';
 import bobDylan from '../assets/images/bobdylan_lp.png';
 import waveHand from '../assets/images/wave_hand.png';
 
+import bobDylanBg from '../assets/images/bobdylan_bg.jpg';
+
 import './styles.scss';
 
 const COLORS = {
@@ -21,7 +23,7 @@ const COLORS = {
 
 const BACKGROUNDS = [
   {
-    backgroundImage: "linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(255,255,255,0.66) 50%,rgba(255,255,255,1) 77%,rgba(255,255,255,1) 99%,rgba(255,255,255,1) 100%), url('../images/bobdylan_bg.jpg')",
+    backgroundImage: `linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(255,255,255,0.66) 50%,rgba(255,255,255,1) 77%,rgba(255,255,255,1) 99%,rgba(255,255,255,1) 100%), url(${bobDylanBg})`,
   },
   {
     backgroundImage: "linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(255,255,255,0.66) 50%,rgba(255,255,255,1) 77%,rgba(255,255,255,1) 99%,rgba(255,255,255,1) 100%), url('../images/arqade_bg.jpg')",
