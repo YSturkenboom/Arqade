@@ -14,7 +14,7 @@ class Popup extends Component {
   /* eslint-disable */
   render() {
     const { visible } = this.state;
-    const { content } = this.props;
+    const { content, onClose } = this.props;
     if (visible) {
       return (
         <div className="popup">
@@ -24,7 +24,7 @@ class Popup extends Component {
             <button
               type="button"
               className="closeButton"
-              onClick={() => this.setState({ visible: false })}
+              onClick={() => onClose()}
             >
               x
             </button>

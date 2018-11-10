@@ -82,6 +82,10 @@ class App extends Component {
     };
   }
 
+  hidePopup = () => {
+    this.setState({ popupVisible: false });
+  }
+
   render() {
     const cards = CARDS.map(card => (
       <ProductCard
@@ -142,7 +146,7 @@ class App extends Component {
           {cards}
         </div>
         {(popupVisible === true)
-          && <Popup />
+          && <Popup onClose={() => this.hidePopup()} />
         }
       </div>
     );
