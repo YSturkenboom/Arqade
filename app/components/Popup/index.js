@@ -54,10 +54,20 @@ class Popup extends Component {
         <div className="popup">
           <div className="popup_inner" style={background}>
             {seconds >= maxSeconds ? (
-              <Fragment>
-                <h4>Oops, you have to answer within 10 seconds.</h4>
+              <div className="notime">
+                <h4 className="message">Oops, you have to answer within 10 seconds.</h4>
                 <p>But don’t worry, for now you can try as many times as you want :)</p>
-              </Fragment>
+
+                <a
+                  href="https://zenobruinsma.typeform.com/to/YnIZnL"
+                  data-mode="popup"
+                  className="cta2"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Write a review
+                </a>
+              </div>
             ) : (
               <div>
                 <Line
