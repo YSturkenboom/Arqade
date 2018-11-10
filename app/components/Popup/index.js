@@ -1,4 +1,4 @@
-import React, { Component} 'react';
+import React, { Component } from 'react';
 import { Line } from 'rc-progress';
 
 import './styles.scss';
@@ -13,18 +13,7 @@ class Popup extends Component {
       finished: false,
       maxSeconds: 7,
     };
-  }
 
-  // componentDidMount() {
-  //   const { seconds } = this.state;
-  //   if (seconds >= 7) {
-  //     this.interval = setInterval(() => this.setState({ seconds: Date.now() }), 1000);
-  //   }
-  // }
-
-  // componentWillUnmount() {
-  //   clearInterval(this.interval);
-  // }
 
   componentDidMount() {
     this.interval = setInterval(() => this.tick(), 10);
@@ -40,7 +29,7 @@ class Popup extends Component {
     this.setState(prevState => ({
       seconds: prevState.seconds + 0.01,
     }));
-  }
+  };
 
   verifyAnswer = (id, correctAnswerId) => {
     if (id === correctAnswerId) {
@@ -48,14 +37,19 @@ class Popup extends Component {
     } else {
       this.setState({ finished: true, correct: false });
     }
-  }
+  };
 
   /* eslint-disable */
   render() {
     const { visible, seconds, maxSeconds, finished, correct } = this.state;
     const { content, onClose, background } = this.props;
     const answerBtns = content.answers.map((answer, index) => (
-      <button className="answerButton" onClick={() => this.verifyAnswer(index, content.correctAnswer)}>{answer}</button>
+      <button
+        className="answerButton"
+        onClick={() => this.verifyAnswer(index, content.correctAnswer)}
+      >
+        {answer}
+      </button>
     ));
 
     if (visible) {
@@ -63,11 +57,7 @@ class Popup extends Component {
         return (
           <div className="popup">
             <div className="popup_inner" style={background}>
-              {correct ? (
-                <h4>Lol nice.</h4>
-              ) : (
-                <h4>Ha you suck</h4>
-              )}
+              {correct ? <h4>Lol nice.</h4> : <h4>Ha you suck</h4>}
               <button type="button" className="closeButton" onClick={() => onClose()}>
                 x
               </button>
