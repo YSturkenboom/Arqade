@@ -6,6 +6,7 @@ class Popup extends Component {
     super(props);
     this.state = {
       visible: true,
+      finished: false
     };
   }
 
