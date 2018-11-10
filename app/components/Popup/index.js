@@ -42,20 +42,16 @@ class Popup extends Component {
 
   /* eslint-disable */
   render() {
-    const { visible, seconds, maxSeconds } = this.state;
-    const { content } = this.props;
 
-    // const Timer = props => {
-    //   const { seconds, maxSeconds } = this.props;
-    //   const styles = {
-    //     width: (seconds / maxSeconds) * 100,
-    //   };
-    //   return <div className="timer" style={styles} />;
-    // };
+    const { visible , seconds, maxSeconds } = this.state;
+    const { content, onClose, background } = this.props;
+    const answerBtns = content.answers.map(answer => <button className="answerButton">{answer}</button>);
+
+
     if (visible) {
       return (
         <div className="popup">
-          <div className="popup_inner">
+          <div className="popup_inner" style={background}>
             <Line
               percent={(seconds / maxSeconds) * 100}
               strokeWidth="4"
@@ -63,23 +59,17 @@ class Popup extends Component {
               strokeLinecap="square"
             />
 
-            <h4>
-              Nike is an American corporation specializing in the sale of sports equipment. In which
-              state would you find their headquarters?
-            </h4>
-            {content}
+             <h4>{content.question}</h4>
+           
             <button
               type="button"
               className="closeButton"
-              onClick={() => this.setState({ visible: false })}
+              onClick={() => onClose()}
             >
               x
             </button>
             <div className="btnContainer">
-              <button className="answerButton">Oregon</button>
-              <button className="answerButton">California</button>
-              <button className="answerButton">Washington</button>
-              <button className="answerButton">New York</button>
+              {answerBtns}
             </div>
           </div>
         </div>

@@ -19,6 +19,44 @@ const COLORS = {
   black: '#000',
 };
 
+const BACKGROUNDS = [
+  {
+    backgroundImage: "linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(255,255,255,0.66) 50%,rgba(255,255,255,1) 77%,rgba(255,255,255,1) 99%,rgba(255,255,255,1) 100%), url('../images/bobdylan_bg.jpg')",
+  },
+  {
+    backgroundImage: "linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(255,255,255,0.66) 50%,rgba(255,255,255,1) 77%,rgba(255,255,255,1) 99%,rgba(255,255,255,1) 100%), url('../images/arqade_bg.jpg')",
+  },
+  {
+    backgroundImage: "linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(255,255,255,0.66) 50%,rgba(255,255,255,1) 77%,rgba(255,255,255,1) 99%,rgba(255,255,255,1) 100%), url('../images/nike_bg.jpg')",
+  },
+  {
+    backgroundImage: "linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(255,255,255,0.66) 50%,rgba(255,255,255,1) 77%,rgba(255,255,255,1) 99%,rgba(255,255,255,1) 100%), url('../images/nike_bg.jpg')",
+  },
+]
+
+const QUESTIONS = [
+  {
+    question: 'H&M',
+    answers: ['b', 'd', 'sd', 'fgd yhr'],
+    correctAnswer: 1,
+  },
+  {
+    question: 'Bob Dylan',
+    answers: ['b', 'd', 'sd', 'fgd yhr'],
+    correctAnswer: 1,
+  },
+  {
+    question: 'Nike is an American corporation specializing in the sale of sports equipment. In which state would you find their headquarters?',
+    answers: ['Oregon', 'California', 'Washington', 'New York'],
+    correctAnswer: 1,
+  },
+  {
+    question: 'Playstation',
+    answers: ['b', 'd', 'sd', 'fgd yhr'],
+    correctAnswer: 1,
+  },
+]
+
 const CARDS = [
   {
     logo: hm,
@@ -30,7 +68,7 @@ const CARDS = [
     color: COLORS.white,
     colorButton: COLORS.white,
     backgroundButton: COLORS.black,
-    id: 1,
+    id: 0,
   },
   {
     logo: vinylLogo,
@@ -42,7 +80,7 @@ const CARDS = [
     color: COLORS.white,
     colorButton: COLORS.white,
     backgroundButton: COLORS.black,
-    id: 2,
+    id: 1,
   },
 
   {
@@ -55,7 +93,7 @@ const CARDS = [
     color: COLORS.black,
     colorButton: COLORS.white,
     backgroundButton: COLORS.black,
-    id: 3,
+    id: 2,
   },
 
   {
@@ -68,7 +106,7 @@ const CARDS = [
     color: COLORS.white,
     colorButton: COLORS.black,
     backgroundButton: COLORS.white,
-    id: 4,
+    id: 3,
   },
 ];
 
@@ -79,7 +117,12 @@ class App extends Component {
     super(props);
     this.state = {
       popupVisible: false,
+      activeQuestionNum: null,
     };
+  }
+
+  hidePopup = () => {
+    this.setState({ popupVisible: false });
   }
 
   render() {
@@ -94,11 +137,11 @@ class App extends Component {
         color={card.color}
         colorButton={card.colorButton}
         backgroundButton={card.backgroundButton}
-        popup={() => this.setState({ popupVisible: true })}
+        popup={() => this.setState({ popupVisible: true, activeQuestionNum: card.id })}
       />
     ));
 
-    const { popupVisible } = this.state;
+    const { popupVisible, activeQuestionNum } = this.state;
     return (
       <div>
         <div className="landingpage">
@@ -142,7 +185,13 @@ class App extends Component {
           {cards}
         </div>
         {(popupVisible === true)
-          && <Popup />
+          && (
+            <Popup
+              onClose={() => this.hidePopup()}
+              content={QUESTIONS[activeQuestionNum]}
+              background={BACKGROUNDS[activeQuestionNum]}
+            />
+          )
         }
       </div>
     );
