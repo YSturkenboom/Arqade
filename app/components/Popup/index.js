@@ -14,13 +14,14 @@ class Popup extends Component {
   /* eslint-disable */
   render() {
     const { visible } = this.state;
-    const { content, onClose } = this.props;
+    const { content, onClose, background } = this.props;
+    const answerBtns = content.answers.map(answer => <button className="answerButton">{answer}</button>);
+
     if (visible) {
       return (
         <div className="popup">
-          <div className="popup_inner">
-            <h4>Nike is an American corporation specializing in the sale of sports equipment. In which state would you find their headquarters?</h4>
-            {content}
+          <div className="popup_inner" style={background}>
+            <h4>{content.question}</h4>
             <button
               type="button"
               className="closeButton"
@@ -29,10 +30,7 @@ class Popup extends Component {
               x
             </button>
             <div className="btnContainer">
-              <button className="answerButton">Oregon</button>
-              <button className="answerButton">California</button>
-              <button className="answerButton">Washington</button>
-              <button className="answerButton">New York</button>
+              {answerBtns}
             </div>
           </div>
         </div>
