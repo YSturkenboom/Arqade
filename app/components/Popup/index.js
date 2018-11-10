@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component} 'react';
 import { Line } from 'rc-progress';
 
 import './styles.scss';
