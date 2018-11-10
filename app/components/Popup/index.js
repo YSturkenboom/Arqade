@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import { Line } from 'rc-progress';
 
 import './styles.scss';
@@ -42,35 +42,38 @@ class Popup extends Component {
 
   /* eslint-disable */
   render() {
-
-    const { visible , seconds, maxSeconds } = this.state;
+    const { visible, seconds, maxSeconds } = this.state;
     const { content, onClose, background } = this.props;
-    const answerBtns = content.answers.map(answer => <button className="answerButton">{answer}</button>);
-
+    const answerBtns = content.answers.map(answer => (
+      <button className="answerButton">{answer}</button>
+    ));
 
     if (visible) {
       return (
         <div className="popup">
           <div className="popup_inner" style={background}>
-            <Line
-              percent={(seconds / maxSeconds) * 100}
-              strokeWidth="4"
-              strokeColor="#000"
-              strokeLinecap="square"
-            />
+            {seconds >= maxSeconds ? (
+              <Fragment>
+                <h4>Oops, you have to answer within 10 seconds.</h4>
+                <p>But don’t worry, for now you can try as many times as you want :)</p>
+              </Fragment>
+            ) : (
+              <div>
+                <Line
+                  percent={(seconds / maxSeconds) * 100}
+                  strokeWidth="4"
+                  strokeColor="#000"
+                  strokeLinecap="square"
+                />
 
-             <h4>{content.question}</h4>
-           
-            <button
-              type="button"
-              className="closeButton"
-              onClick={() => onClose()}
-            >
+                <h4>{content.question}</h4>
+                <div className="btnContainer">{answerBtns}</div>
+              </div>
+            )}
+
+            <button type="button" className="closeButton" onClick={() => onClose()}>
               x
             </button>
-            <div className="btnContainer">
-              {answerBtns}
-            </div>
           </div>
         </div>
       );
