@@ -9,7 +9,8 @@ class Popup extends Component {
     this.state = {
       visible: true,
       seconds: 0,
-      // finished: false,
+      correct: null,
+      finished: false,
       maxSeconds: 7,
     };
   }
@@ -35,21 +36,46 @@ class Popup extends Component {
 
   open = () => this.setState({ visible: true });
 
-  tick() {
+  tick = () => {
     this.setState(prevState => ({
       seconds: prevState.seconds + 0.01,
     }));
   }
 
+  verifyAnswer = (id, correctAnswerId) => {
+    if (id === correctAnswerId) {
+      this.setState({ finished: true, correct: true });
+    } else {
+      this.setState({ finished: true, correct: false });
+    }
+  }
+
   /* eslint-disable */
   render() {
-    const { visible, seconds, maxSeconds } = this.state;
+    const { visible, seconds, maxSeconds, finished, correct } = this.state;
     const { content, onClose, background } = this.props;
-    const answerBtns = content.answers.map(answer => (
-      <button className="answerButton">{answer}</button>
+    const answerBtns = content.answers.map((answer, index) => (
+      <button className="answerButton" onClick={() => this.verifyAnswer(index, content.correctAnswer)}>{answer}</button>
     ));
 
     if (visible) {
+      if (finished) {
+        return (
+          <div className="popup">
+            <div className="popup_inner" style={background}>
+              {correct ? (
+                <h4>Lol nice.</h4>
+              ) : (
+                <h4>Ha you suck</h4>
+              )}
+              <button type="button" className="closeButton" onClick={() => onClose()}>
+                x
+              </button>
+            </div>
+          </div>
+        );
+      }
+
       return (
         <div className="popup">
           <div className="popup_inner" style={background}>
