@@ -7,7 +7,7 @@
   right: 0;
   bottom: 0;
   margin: auto;
-  background-color: rgba(0,0,0, 0.5);
+  background-color: rgba(0, 0, 0, 0.5);
 }
 .popup_inner {
   position: absolute;
@@ -19,10 +19,16 @@
   background: white;
   padding: 10px;
   border-radius: 5px;
-  // background-image: linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(255,255,255,0.66) 50%,rgba(255,255,255,1) 77%,rgba(255,255,255,1) 99%,rgba(255,255,255,1) 100%), url('../../assets/images/nike_bg.jpg');
   background-size: cover;
   background-position: center;
 
+  svg {
+    height: 20px;
+    width: 100%;
+    position: absolute;
+    top: -20px;
+    left: 0px;
+  }
 }
 .btnContainer {
   display: flex;
@@ -78,4 +84,9 @@ h4 {
     border: 2px solid black;
     transform: translateY(-7px);
   }
+}
+
+.timer {
+  height: 50px;
+  background: black;
 }
