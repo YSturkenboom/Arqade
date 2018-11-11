@@ -63,7 +63,7 @@ class ProductCard extends Component {
             type="button"
             onClick={() => popup()}
           >
-            GET DISCOUNTdfsd
+            Play!
           </button>
         </div>
         <div className="ProductCard__image">

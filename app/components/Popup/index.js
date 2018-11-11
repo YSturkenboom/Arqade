@@ -13,7 +13,7 @@ class Popup extends Component {
       finished: false,
       maxSeconds: 7,
     };
-
+  }
 
   componentDidMount() {
     this.interval = setInterval(() => this.tick(), 10);
