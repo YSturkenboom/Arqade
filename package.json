@@ -39,6 +39,7 @@
   },
   "dependencies": {
     "@babel/plugin-proposal-class-properties": "^7.1.0",
+    "airtable": "^0.5.7",
     "cross-env": "5.2.0",
     "prop-types": "^15.6.2",
     "rc-progress": "^2.2.6",
