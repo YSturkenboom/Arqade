@@ -20,6 +20,8 @@ $max-width-xs: 767px;
   transition: 0.25s transform;
   flex-shrink: 0;
   flex-grow: 0;
+  flex-basis: 20%;
+  min-width: 250px;
 
   @include max-xs {
     flex: 100%;

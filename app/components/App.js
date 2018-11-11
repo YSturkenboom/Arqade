@@ -150,41 +150,39 @@ class App extends Component {
     const { popupVisible, activeQuestionNum } = this.state;
     return (
       <div className="landingpage">
-        <div className="view_height">
-          <div className="landingpage__logo">
-            <p>Arqade</p>
-          </div>
-          <div className="landingpage__content">
-            <h4>
-              Discounts made fun
-              <img src={controllerEmoji} alt="wave" />
-            </h4>
-            <p>
-              Do you like discounts? Of course you do, discounts are awesome. But scraping together
-              promo codes or waiting for sale? Decidedly not awesome. We at Arqade think receiving
-              discounts should be as fun as the discounts themselves.
-            </p>
-          </div>
-          <div className="landingpage__buttons">
-            <Link
-              className="cta1"
-              to="try"
-              spy
-              smooth
-              duration={1000}
-            >
-              Try it yourself
-            </Link>
-            <a
-              href="https://zenobruinsma.typeform.com/to/YnIZnL"
-              data-mode="popup"
-              className="cta2"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Get early access
-            </a>
-          </div>
+        <div className="landingpage__logo">
+          <p>Arqade</p>
+        </div>
+        <div className="landingpage__content">
+          <h4>
+            Discounts made fun
+            <img src={controllerEmoji} alt="wave" />
+          </h4>
+          <p>
+            Do you like discounts? Of course you do, discounts are awesome. But scraping together
+            promo codes or waiting for sale? Decidedly not awesome. We at Arqade think receiving
+            discounts should be as fun as the discounts themselves.
+          </p>
+        </div>
+        <div className="landingpage__buttons">
+          <Link
+            className="cta1"
+            to="try"
+            spy
+            smooth
+            duration={1000}
+          >
+            Try it yourself
+          </Link>
+          <a
+            href="https://zenobruinsma.typeform.com/to/YnIZnL"
+            data-mode="popup"
+            className="cta2"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Get early access
+          </a>
         </div>
         <Element name="try">
           <div name="ProductContainer" className="ProductContainer">
@@ -224,6 +222,20 @@ class App extends Component {
             Share your thoughts
           </a>
         </div>
+
+        <div className="landingpage__content">
+          <h4>
+            Are you a e-commerce business owner, or do you sell your product online?
+            <img src={rocketEmoji} alt="wave" />
+          </h4>
+
+          <p>
+            Then we are interested in providing a custom integration into your website
+            to test our idea. As an early adopter you&#39;ll be uniquely able to help shape
+            the final product, and of course
+          </p>
+        </div>
+
         {popupVisible === true && (
           <Popup
             onClose={() => this.hidePopup()}
