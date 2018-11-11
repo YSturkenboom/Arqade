@@ -1,4 +1,55 @@
+// @import '../assets/scss/variables';
+// @import '../assets/scss/common';
+$max-xs: '(max-width: 767px)';
+$max-sm: '(max-width: 991px)';
+$max-md: '(max-width: 1199px)';
+
+$min-sm: '(min-width: 768px)';
+$min-md: '(min-width: 992px)';
+$min-lg: '(min-width: 1200px)';
+
+$max-width-xxs: 400px;
 $max-width-xs: 767px;
+$max-width-sm: 991px;
+$max-width-md: 1199px;
+
+$min-width-sm: 768px;
+$min-width-md: 992px;
+$min-width-lg: 1200px;
+
+$color-white: #fff;
+$color-black: #000;
+$color-light-blue: #00ade4;
+$color-blue: #1a2a56;
+$color-grey: rgba(173, 207, 226, 0.1);
+$color-border: rgba(208, 208, 208, 0.5);
+$color-input-placeholder: #787e8c;
+$color-accent: #18ecc0;
+
+$body-bg: #f5f6fa;
+$font-color-dark: #333;
+$title-color-dark: #2b2b2b;
+$font-color-light: rgba(255, 255, 255, 0.8);
+
+$transparent: rgba(255, 255, 255, 0);
+$blue: #00ade4;
+$indigo: #6610f2;
+$purple: #6f42c1;
+$pink: #e83e8c;
+$red: #ff6e72;
+$orange: #fd7e14;
+$yellow: #ffc107;
+$green: #0edd4d;
+$teal: #20c997;
+$cyan: #17a2b8;
+
+$font-primary: 'Karla', sans-serif;
+$font-secondary: 'Filson-Black', serif;
+$font-color: #000;
+$font-color-medium: #333;
+$font-color-light: #666;
+
+$border-radius: 2.2px;
 
 @mixin max-xs {
   @media (max-width: $max-width-xs) {
@@ -8,7 +59,7 @@ $max-width-xs: 767px;
 
 .ProductCard {
   height: 550px;
-  margin: 10px;
+  margin: 20px 0;
   // animation: moveSlideshow 15s linear infinite;
   width: 300px;
   padding: 20px;
@@ -18,11 +69,12 @@ $max-width-xs: 767px;
   align-items: center;
   border-radius: 4px;
   transition: 0.25s transform;
-  flex-shrink: 0;
+  flex-shrink: 1;
   flex-grow: 0;
+  flex-basis: 20%;
 
   @include max-xs {
-    flex: 100%;
+    flex-basis: 40%;
   }
 
   &__header {
@@ -53,7 +105,7 @@ $max-width-xs: 767px;
       color: white;
       font-family: Cera-Bold, sans-serif;
       padding-top: 10px;
-      height: 2em;
+      height: 3em;
     }
   }
 
