@@ -1,0 +1,25 @@
+.contact {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  padding-bottom: 40px;
+
+  h2 {
+    font-family: Cera-Bold, sans-serif;
+    font-size: 50px;
+    color: #000;
+    letter-spacing: 0;
+    margin-bottom: 0;
+  }
+
+  p {
+    font-family: Cera-Bold, sans-serif;
+    font-size: 30px;
+    color: black;
+  }
+
+  &__form {
+    display: flex;
+  }
+}

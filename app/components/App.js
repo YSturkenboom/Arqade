@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link, Element } from 'react-scroll';
 import ProductCard from './ProductCard';
+import Contact from './Contact';
 import Popup from './Popup';
 import hm from '../assets/images/hm_logo.png';
 import boots from '../assets/images/Boots.png';
@@ -57,7 +58,8 @@ const QUESTIONS = [
     correctAnswer: 2,
   },
   {
-    question: 'Nike is an American corporation specializing in the sale of sports equipment. In which state would you find their headquarters?',
+    question:
+      'Nike is an American corporation specializing in the sale of sports equipment. In which state would you find their headquarters?',
     answers: ['Oregon', 'California', 'Washington', 'New York'],
     correctAnswer: 0,
   },
@@ -130,7 +132,7 @@ class App extends Component {
 
   componentDidMount = () => {
     document.title = 'Arqade - Discounts made fun';
-  }
+  };
 
   hidePopup = () => {
     this.setState({ popupVisible: false });
@@ -155,6 +157,7 @@ class App extends Component {
     const { popupVisible, activeQuestionNum } = this.state;
     return (
       <div className="landingpage">
+<<<<<<< HEAD
         <div className="landingpage__logo">
           <p>Arqade</p>
         </div>
@@ -191,6 +194,37 @@ class App extends Component {
         </div>
         <div className="h-bar-text">
           <span className="bar" /><span className="bar-text">Examples of Arqade integrations</span><span className="bar" />
+=======
+        <div className="view_height">
+          <div className="landingpage__logo">
+            <p>Arqade</p>
+          </div>
+          <div className="landingpage__content">
+            <h4>
+              Discounts made fun
+              <img src={controllerEmoji} alt="wave" />
+            </h4>
+            <p>
+              Do you like discounts? Of course you do, discounts are awesome. But scraping together
+              promo codes or waiting for sale? Decidedly not awesome. We at Arqade think receiving
+              discounts should be as fun as the discounts themselves.
+            </p>
+          </div>
+          <div className="landingpage__buttons">
+            <Link className="cta1" to="try" spy smooth duration={1000}>
+              Try it yourself
+            </Link>
+            <a
+              href="https://zenobruinsma.typeform.com/to/YnIZnL"
+              data-mode="popup"
+              className="cta2"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Get early access
+            </a>
+          </div>
+>>>>>>> 83e7acc6eb12f0aa130ec5b31aab48df00a108d3
         </div>
         <Element name="try">
           <div name="ProductContainer" className="ProductContainer">
@@ -231,19 +265,22 @@ class App extends Component {
           </h4>
 
           <p>
-            We dont have a really cool origin story to put here, no discovering
-            ourselves on a trip to Thailand or prophetic dreams or something
-            like that. <br /><br />But what we do have is a desire to make
-            buying stuff online more <span className="pulse">fun</span>.
-            We&#39;re three guys in the Netherlands trying to make useful, fun and
-            exciting products for you.
-            <br /><br />
-            We would love it if you came along on our journey. We&#39;re very excited
-            about Arqade, but we want to evolve Arqade into a great product people
-            love, and so we would love some input from the community!
-            <br /><br />How can we make your experience better? Do you have feature suggestions?
-            Drop us a line, or chat with us via the button in the bottom-right corner!
-            We would love to hear your thoughts.
+            We dont have a really cool origin story to put here, no discovering ourselves on a trip
+            to Thailand or prophetic dreams or something like that. <br />
+            <br />
+            But what we do have is a desire to make buying stuff online more{' '}
+            <span className="pulse">fun</span>. We&#39;re three guys in the Netherlands trying to
+            make useful, fun and exciting products for you.
+            <br />
+            <br />
+            We would love it if you came along on our journey. We&#39;re very excited about Arqade,
+            but we want to evolve Arqade into a great product people love, and so we would love some
+            input from the community!
+            <br />
+            <br />
+            How can we make your experience better? Do you have feature suggestions? Drop us a line,
+            or chat with us via the button in the bottom-right corner! We would love to hear your
+            thoughts.
           </p>
         </div>
         <div className="landingpage__buttons">
@@ -278,6 +315,7 @@ class App extends Component {
             background={BACKGROUNDS[activeQuestionNum]}
           />
         )}
+        <Contact />
       </div>
     );
   }
