@@ -14,6 +14,9 @@ import controllerEmoji from '../assets/images/controller_emoji.png';
 import rocketEmoji from '../assets/images/rocket_emoji.png';
 
 import bobDylanBg from '../assets/images/bobdylan_bg.jpg';
+import nikeBg from '../assets/images/nike_bg.jpg';
+import hmBg from '../assets/images/hm_bg.jpg';
+import psBg from '../assets/images/ps_bg.jpg';
 
 import './styles.scss';
 
@@ -24,19 +27,16 @@ const COLORS = {
 
 const BACKGROUNDS = [
   {
+    backgroundImage: `linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(255,255,255,0.66) 50%,rgba(255,255,255,1) 77%,rgba(255,255,255,1) 99%,rgba(255,255,255,1) 100%), url(${hmBg})`,
+  },
+  {
     backgroundImage: `linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(255,255,255,0.66) 50%,rgba(255,255,255,1) 77%,rgba(255,255,255,1) 99%,rgba(255,255,255,1) 100%), url(${bobDylanBg})`,
   },
   {
-    backgroundImage:
-      "linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(255,255,255,0.66) 50%,rgba(255,255,255,1) 77%,rgba(255,255,255,1) 99%,rgba(255,255,255,1) 100%), url('../images/arqade_bg.jpg')",
+    backgroundImage: `linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(255,255,255,0.66) 50%,rgba(255,255,255,1) 77%,rgba(255,255,255,1) 99%,rgba(255,255,255,1) 100%), url(${nikeBg})`,
   },
   {
-    backgroundImage:
-      "linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(255,255,255,0.66) 50%,rgba(255,255,255,1) 77%,rgba(255,255,255,1) 99%,rgba(255,255,255,1) 100%), url('../images/nike_bg.jpg')",
-  },
-  {
-    backgroundImage:
-      "linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(255,255,255,0.66) 50%,rgba(255,255,255,1) 77%,rgba(255,255,255,1) 99%,rgba(255,255,255,1) 100%), url('../images/nike_bg.jpg')",
+    backgroundImage: `linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(255,255,255,0.66) 50%,rgba(255,255,255,1) 77%,rgba(255,255,255,1) 99%,rgba(255,255,255,1) 100%), url(${psBg})`,
   },
 ];
 
@@ -146,8 +146,8 @@ class App extends Component {
 
     const { popupVisible, activeQuestionNum } = this.state;
     return (
-      <div>
-        <div className="landingpage">
+      <div className="landingpage">
+        <div className="view_height">
           <div className="landingpage__logo">
             <p>Arqade</p>
           </div>
@@ -186,27 +186,29 @@ class App extends Component {
         <div name="ProductContainer" className="ProductContainer">
           {cards}
         </div>
-        <Element name="mission">
-          <div className="landingpage__content">
+        <div className="landingpage__content">
+          <Element name="mission">
             <h4>
-              Our mission
+              Our thoughts
               <img src={rocketEmoji} alt="wave" />
             </h4>
-            <p>
-              We dont have a really cool origin story to put here, no discovering
-              ourselves on a trip to Thailand or prophetic dreams or something
-              like that. <br /><br />But what we do have is a desire to make
-              buying stuff online more <span className="pulse">fun</span>.
-              We&#39;re three guys in the Netherlands trying to make useful, fun and
-              exciting products for you, whoever you might be.
-              <br /><br />
-              We would love it if you came along on our journey. We&#39;re very excited
-              about Arqade, but we would love some input from the community! How
-              can we make your experience better? Do you have suggestions for a
-              new feature? Drop us a line! We would love to hear your thoughts.
-            </p>
-          </div>
-        </Element>
+          </Element>
+          <p>
+            We dont have a really cool origin story to put here, no discovering
+            ourselves on a trip to Thailand or prophetic dreams or something
+            like that. <br /><br />But what we do have is a desire to make
+            buying stuff online more <span className="pulse">fun</span>.
+            We&#39;re three guys in the Netherlands trying to make useful, fun and
+            exciting products for you.
+            <br /><br />
+            We would love it if you came along on our journey. We&#39;re very excited
+            about Arqade, but we want to evolve Arqade into a great product people
+            love, and so we would love some input from the community!
+            <br /><br />How can we make your experience better? Do you have feature suggestions?
+            Drop us a line, or chat with us via the button in the bottom-right corner!
+            We would love to hear your thoughts.
+          </p>
+        </div>
         <div className="landingpage__buttons">
           <a
             href="https://zenobruinsma.typeform.com/to/YnIZnL"

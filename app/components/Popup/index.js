@@ -59,8 +59,9 @@ class Popup extends Component {
             <div className="popup_inner" style={background}>
               {correct ? (
                 <div className="notime">
-                  <h4 className="message">Wow , </h4>
-                  <p>But don’t worry, for now you can try as many times as you want :)</p>
+                  <h4 className="message">Wow! That's correct!</h4>
+                  <p>Sorry, we can't offer you the discount yet... But if you tell
+                    us what you think soon we will!<br /></p>
 
                   <img src="https://media.giphy.com/media/AszIaSlJKPRX4j2zqP/giphy.gif" alt="gif" />
 
@@ -71,12 +72,12 @@ class Popup extends Component {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    Write a review
+                    Share your thoughts
                   </a>
                 </div>
               ) : (
                 <div className="notime">
-                  <h4 className="message">Oops, you have to answer within 10 seconds.</h4>
+                  <h4 className="message">Sorry! That is not the right answer.</h4>
                   <p>But don’t worry, for now you can try as many times as you want :)</p>
 
                   <img src="https://media.giphy.com/media/yoJC2Olx0ekMy2nX7W/giphy.gif" alt="gif" />
@@ -88,7 +89,7 @@ class Popup extends Component {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    Write a review
+                    Share your thoughts
                   </a>
                 </div>
               )}
@@ -105,7 +106,7 @@ class Popup extends Component {
           <div className="popup_inner" style={background}>
             {seconds >= maxSeconds ? (
               <div className="notime">
-                <h4 className="message">Oops, you have to answer within 10 seconds.</h4>
+                <h4 className="message">Oops, you have to answer within the time limit.</h4>
                 <p>But don’t worry, for now you can try as many times as you want :)</p>
 
                 <img src="https://media.giphy.com/media/xUySTEJYS5F1Cayg92/giphy.gif" alt="gif" />
@@ -117,7 +118,7 @@ class Popup extends Component {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Write a review
+                  Share your thoughts
                 </a>
               </div>
             ) : (
@@ -133,9 +134,8 @@ class Popup extends Component {
                 <div className="btnContainer">{answerBtns}</div>
               </div>
             )}
-
             <button type="button" className="closeButton" onClick={() => onClose()}>
-              x
+              ×
             </button>
           </div>
         </div>
