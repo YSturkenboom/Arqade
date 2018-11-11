@@ -10,7 +10,8 @@ import PlaystationLogo from '../assets/images/playstation_logo.png';
 import controller from '../assets/images/controller.png';
 import vinylLogo from '../assets/images/vinyl_logo.png';
 import bobDylan from '../assets/images/bobdylan_lp.png';
-import waveHand from '../assets/images/wave_hand.png';
+import controllerEmoji from '../assets/images/controller_emoji.png';
+import rocketEmoji from '../assets/images/rocket_emoji.png';
 
 import bobDylanBg from '../assets/images/bobdylan_bg.jpg';
 
@@ -152,8 +153,8 @@ class App extends Component {
           </div>
           <div className="landingpage__content">
             <h4>
-              Hey there you
-              <img src={waveHand} alt="wave" />
+              Discounts made fun
+              <img src={controllerEmoji} alt="wave" />
             </h4>
             <p>
               Do you like discounts? Of course you do, discounts are awesome. But scraping together
@@ -163,7 +164,7 @@ class App extends Component {
           </div>
           <div className="landingpage__buttons">
             <Link className="cta1" to="ProductContainer" spy smooth duration={1000}>
-              Get discount
+              Play!
             </Link>
             <a
               href="https://zenobruinsma.typeform.com/to/YnIZnL"
@@ -178,6 +179,26 @@ class App extends Component {
         </div>
         <div name="ProductContainer" className="ProductContainer">
           {cards}
+        </div>
+        <div className="landingpage__content">
+          <h4>
+            Our mission
+            <img src={rocketEmoji} alt="wave" />
+          </h4>
+          <p>
+            We dont have a really cool origin story to put here, no discovering ourselves on a trip
+            to Thailand or prophetic dreams or something like that. <br />
+            <br />
+            But what we do have is a desire to make buying stuff online more{' '}
+            <span className="pulse">fun</span>. We&#39;re three guys in the Netherlands trying to
+            make useful, fun and exciting products for you, whoever you might be.
+            <br />
+            <br />
+            We would love it if you came along on our journey. We&#39;re very excited about Arqade,
+            but we would love some input from the community! How can we make your experience better?
+            Do you have suggestions for a new feature? Drop us a line! We would love to hear your
+            thoughts.
+          </p>
         </div>
         {popupVisible === true && (
           <Popup

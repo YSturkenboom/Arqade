@@ -360,3 +360,26 @@ html {
 #react-view {
   height: 100%;
 }
+
+@keyframes pulse {
+  0% {
+    color: black;
+    text-shadow:  #fafafa 1px 1px, #fafafa 2px 2px;
+  }
+  100% {
+    color: #00d8ff;
+    text-shadow:  #fafafa 3px 3px, #fafafa 4px 4px;
+  }
+}
+
+.pulse {
+  /* animation: pulse 2s ease-in-out 0 infinite alternate; */
+  /*animations*/
+  font-size: 2em;
+  animation-name: pulse;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
