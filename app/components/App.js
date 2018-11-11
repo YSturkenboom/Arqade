@@ -10,8 +10,13 @@ import PlaystationLogo from '../assets/images/playstation_logo.png';
 import controller from '../assets/images/controller.png';
 import vinylLogo from '../assets/images/vinyl_logo.png';
 import bobDylan from '../assets/images/bobdylan_lp.png';
-import controllerEmoji from '../assets/images/controller_emoji.png';
+// import controllerEmoji from '../assets/images/controller_emoji.png';
+import joystickEmoji from '../assets/images/joystick_emoji.png';
 import rocketEmoji from '../assets/images/rocket_emoji.png';
+import laughingEmoji from '../assets/images/laughing_emoji.png';
+import chartEmoji from '../assets/images/chart_emoji.png';
+import eyesEmoji from '../assets/images/eyes_emoji.png';
+import globeEmoji from '../assets/images/globe_emoji.png';
 
 import bobDylanBg from '../assets/images/bobdylan_bg.jpg';
 import nikeBg from '../assets/images/nike_bg.jpg';
@@ -156,7 +161,7 @@ class App extends Component {
         <div className="landingpage__content">
           <h4>
             Discounts made fun
-            <img src={controllerEmoji} alt="wave" />
+            <img src={joystickEmoji} alt="wave" />
           </h4>
           <p>
             Do you like discounts? Of course you do, discounts are awesome. But scraping together
@@ -184,11 +189,41 @@ class App extends Component {
             Get early access
           </a>
         </div>
+        <div className="h-bar-text">
+          <span className="bar" /><span className="bar-text">Examples of Arqade integrations</span><span className="bar" />
+        </div>
         <Element name="try">
           <div name="ProductContainer" className="ProductContainer">
             {cards}
           </div>
         </Element>
+        <div className="landingpage__usps">
+          <div className="usp">
+            <img src={laughingEmoji} alt="wave" />
+            <img src={chartEmoji} alt="wave" />
+            <h5>Fun increases conversion</h5>
+            <p>
+              Studies have shown fun increases conversion. Why not make use of
+              it? :)
+            </p>
+          </div>
+          <div className="usp">
+            <img src={globeEmoji} alt="wave" />
+            <img src={eyesEmoji} alt="wave" />
+            <h5>Get more traffic</h5>
+            <p>
+              Customers can unlock more tries by sharing, following or liking
+              your page on social media
+            </p>
+          </div>
+          <div className="usp">
+            <h5>Custom tailored</h5>
+            <p>
+              From colors to size and content, we can customize everything based
+              on your need.
+            </p>
+          </div>
+        </div>
         <div className="landingpage__content">
           <h4>
             Our thoughts
