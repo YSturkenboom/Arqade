@@ -42,33 +42,32 @@ const BACKGROUNDS = [
 
 const QUESTIONS = [
   {
-    question: 'H&M',
-    answers: ['b', 'd', 'sd', 'fgd yhr'],
+    question: 'In which country was the First H&M opened?',
+    answers: ['The Netherlands', 'Sweden', 'Finland', 'Germany'],
     correctAnswer: 1,
   },
   {
-    question: 'Bob Dylan',
-    answers: ['b', 'd', 'sd', 'fgd yhr'],
-    correctAnswer: 1,
+    question: 'Dylan’s 1969 double-LP, widely considered rock’s first bootleg album, was titled:',
+    answers: ['The White Album', 'The Black Album', 'Great White Wonder', 'Kum Back'],
+    correctAnswer: 2,
   },
   {
-    question:
-      'Nike is an American corporation specializing in the sale of sports equipment. In which state would you find their headquarters?',
+    question: 'Nike is an American corporation specializing in the sale of sports equipment. In which state would you find their headquarters?',
     answers: ['Oregon', 'California', 'Washington', 'New York'],
-    correctAnswer: 1,
+    correctAnswer: 0,
   },
   {
-    question: 'Playstation',
-    answers: ['b', 'd', 'sd', 'fgd yhr'],
-    correctAnswer: 1,
+    question: 'Who is the main character of the original Metal Gear Solid?',
+    answers: ['Big Boss', 'Crash Bandicoot', 'Solid Snake', 'Simon Belmont'],
+    correctAnswer: 2,
   },
 ];
 
 const CARDS = [
   {
     logo: hm,
-    subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.',
-    title: 'Men’s original 500 boots',
+    subtitle: null,
+    title: 'Men’s Original 500 Boots',
     productImage: boots,
     background: '#4ad4fd',
     color: COLORS.white,
@@ -78,7 +77,7 @@ const CARDS = [
   },
   {
     logo: vinylLogo,
-    subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.',
+    subtitle: null,
     title: 'Bob Dylan 12" Album',
     productImage: bobDylan,
     background: '#DE4329',
@@ -90,8 +89,8 @@ const CARDS = [
 
   {
     logo: nikeLogo,
-    subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.',
-    title: 'Paris saint germain squad top',
+    subtitle: null,
+    title: 'Paris Saint Germain Squad Top',
     productImage: nikeShirt,
     background: COLORS.white,
     color: COLORS.black,
@@ -102,7 +101,7 @@ const CARDS = [
 
   {
     logo: PlaystationLogo,
-    subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.',
+    subtitle: null,
     title: 'Sony DualShock 4 Controller',
     productImage: controller,
     background: COLORS.black,
@@ -122,6 +121,10 @@ class App extends Component {
       popupVisible: false,
       activeQuestionNum: null,
     };
+  }
+
+  componentDidMount = () => {
+    document.title = 'Arqade - Discounts made fun';
   }
 
   hidePopup = () => {

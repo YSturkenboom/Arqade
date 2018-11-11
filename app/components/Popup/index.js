@@ -45,7 +45,7 @@ class Popup extends Component {
     const { content, onClose, background } = this.props;
     const answerBtns = content.answers.map((answer, index) => (
       <button
-        className="answerButton"
+        className="answerButton card-btn"
         onClick={() => this.verifyAnswer(index, content.correctAnswer)}
       >
         {answer}
@@ -68,7 +68,7 @@ class Popup extends Component {
                   <a
                     href="https://zenobruinsma.typeform.com/to/YnIZnL"
                     data-mode="popup"
-                    className="cta2"
+                    className="cta2 card-btn"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -85,7 +85,7 @@ class Popup extends Component {
                   <a
                     href="https://zenobruinsma.typeform.com/to/YnIZnL"
                     data-mode="popup"
-                    className="cta2"
+                    className="cta2 card-btn"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -114,7 +114,7 @@ class Popup extends Component {
                 <a
                   href="https://zenobruinsma.typeform.com/to/YnIZnL"
                   data-mode="popup"
-                  className="cta2"
+                  className="cta2 card-btn"
                   target="_blank"
                   rel="noopener noreferrer"
                 >

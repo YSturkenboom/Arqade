@@ -1,16 +1,29 @@
+$max-width-xs: 767px;
+
+@mixin max-xs {
+  @media (max-width: $max-width-xs) {
+    @content;
+  }
+}
+
 .ProductCard {
   height: 550px;
   margin: 20px;
-  animation: moveSlideshow 15s linear infinite;
+  // animation: moveSlideshow 15s linear infinite;
   width: 300px;
+  padding: 20px;
   box-shadow: 10px 32px 32px 0 rgba(0, 0, 0, 0.15);
   display: flex;
   flex-direction: column;
   align-items: center;
   border-radius: 4px;
   transition: 0.25s transform;
-  cursor: pointer;
   flex-shrink: 0;
+  flex-grow: 0;
+
+  @include max-xs {
+    flex: 100%;
+  }
 
   &__header {
     align-items: center;
@@ -39,6 +52,7 @@
       color: white;
       font-family: Cera-Bold, sans-serif;
       padding-top: 10px;
+      height: 2em;
     }
   }
 
@@ -50,6 +64,8 @@
       padding: 15px 25px;
       transition: color 0.25s, background-color 0.25s;
       border-radius: 3px;
+      font-size: 20px;
+      font-family: Cera-Bold, sans-serif;
 
       &:hover {
         color: black;
@@ -76,9 +92,9 @@
     }
   }
 
-  &:hover {
-    transform: translateY(-7px);
-  }
+  // &:hover {
+  //   transform: translateY(-7px);
+  // }
 }
 
 @keyframes moveSlideshow {

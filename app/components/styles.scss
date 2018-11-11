@@ -51,6 +51,12 @@ $font-color-light: #666;
 
 $border-radius: 2.2px;
 
+@mixin max-xs {
+  @media (max-width: $max-width-xs) {
+    @content;
+  }
+}
+
 .view_height {
   // height: calc(100vh - 42px);
 }
@@ -58,7 +64,7 @@ $border-radius: 2.2px;
 .landingpage {
   &__logo {
     align-self: flex-start;
-    padding: 10px 80px;
+    padding: 10px 30px;
 
     p {
       font-family: Cera-Bold, sans-serif;
@@ -68,9 +74,9 @@ $border-radius: 2.2px;
         cubic-bezier(0.215, 0.61, 0.355, 1) both;
       animation: tracking-in-expand 3s cubic-bezier(0.215, 0.61, 0.355, 1) both;
 
-      // @include max-xs {
-      //   font-size: 20px;
-      // }
+      @include max-xs {
+        font-size: 20px;
+      }
     }
   }
 
@@ -90,10 +96,10 @@ $border-radius: 2.2px;
       max-width: 1000px;
       margin: 0 auto;
       margin-top: 60px;
-      //
-      // @include max-xs {
-      //   font-size: 16px;
-      // }
+
+      @include max-xs {
+        font-size: 16px;
+      }
     }
 
     img {
@@ -116,20 +122,34 @@ $border-radius: 2.2px;
 
       img {
         vertical-align: -0.3em;
+
+        @include max-xs {
+          width: 30px;
+          height: auto;
+          vertical-align: -0.1em;
+          margin-left: 10px;
+        }
       }
-      // @include max-xs {
-      //   font-size: 30px;
-      // }
+      @include max-xs {
+        font-size: 30px;
+        margin-left: 0;
+        margin-right: 0;
+      }
     }
   }
 
   &__buttons {
     -webkit-animation: slide-top 0.75s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
     animation: slide-top 0.75s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-    margin-top: 100px;
-    margin-bottom: 100px;
+    margin-top: 50px;
+    margin-bottom: 50px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
+
+    @include max-xs {
+      flex-direction: column;
+    }
 
     a {
       padding: 20px 60px;
@@ -143,11 +163,12 @@ $border-radius: 2.2px;
       border-radius: 4px;
       text-decoration: none;
 
-      // @include max-xs {
-      //   padding: 10px 30px;
-      //   margin: 0 15px;
-      //   font-size: 12px;
-      // }
+      @include max-xs {
+        padding: 20px 40px;
+        font-size: 14px;
+        width: 200px;
+        margin: 15px auto;
+      }
     }
 
     .cta1 {
@@ -199,9 +220,13 @@ $border-radius: 2.2px;
 .ProductContainer {
   display: flex;
   width: 100%;
-  -webkit-animation: slide-top 1s cubic-bezier(0, 0, 0, 0) both;
-  animation: slide-top 1s cubic-bezier(0, 0, 0, 0) both;
-  margin-top: 40px;
+  // -webkit-animation: slide-top 1s cubic-bezier(0, 0, 0, 0) both;
+  // animation: slide-top 1s cubic-bezier(0, 0, 0, 0) both;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 40px auto;
+  margin-bottom: 150px;
+  max-width: 1200px;
 }
 
 .landing {
@@ -272,11 +297,11 @@ $border-radius: 2.2px;
     transform: translateY(-100px);
   }
 }
-
-.ProductContainer:hover .ProductCard {
-  -webkit-animation-play-state: paused;
-  animation-play-state: paused;
-}
+//
+// .ProductContainer:hover .ProductCard {
+//   -webkit-animation-play-state: paused;
+//   animation-play-state: paused;
+// }
 
 @-webkit-keyframes vibrate-1 {
   0% {
@@ -357,19 +382,17 @@ $border-radius: 2.2px;
 }
 
 html {
-  overflow-y: scroll;
+  // overflow-y: scroll;
 }
 
-body,
-html {
+body {
   height: 100%;
   width: 100%;
-  overflow: hidden;
-  overflow-y: auto;
   background-image: url('../assets/images/arqade_bg.jpg');
-  background-size: cover;
+  background-size:contain;
+  max-width: 1500px;
+  margin: 0 auto;
 }
-
 #react-view {
   height: 100%;
 }
