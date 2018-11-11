@@ -18,6 +18,8 @@ import laughingEmoji from '../assets/images/laughing_emoji.png';
 import chartEmoji from '../assets/images/chart_emoji.png';
 import eyesEmoji from '../assets/images/eyes_emoji.png';
 import globeEmoji from '../assets/images/globe_emoji.png';
+import artistEmoji from '../assets/images/artist_emoji.png';
+import wrenchEmoji from '../assets/images/wrench_emoji.png';
 
 import bobDylanBg from '../assets/images/bobdylan_bg.jpg';
 import nikeBg from '../assets/images/nike_bg.jpg';
@@ -157,7 +159,6 @@ class App extends Component {
     const { popupVisible, activeQuestionNum } = this.state;
     return (
       <div className="landingpage">
-<<<<<<< HEAD
         <div className="landingpage__logo">
           <p>Arqade</p>
         </div>
@@ -173,13 +174,7 @@ class App extends Component {
           </p>
         </div>
         <div className="landingpage__buttons">
-          <Link
-            className="cta1"
-            to="try"
-            spy
-            smooth
-            duration={1000}
-          >
+          <Link className="cta1" to="try" spy smooth duration={1000}>
             Try it yourself
           </Link>
           <a
@@ -194,37 +189,6 @@ class App extends Component {
         </div>
         <div className="h-bar-text">
           <span className="bar" /><span className="bar-text">Examples of Arqade integrations</span><span className="bar" />
-=======
-        <div className="view_height">
-          <div className="landingpage__logo">
-            <p>Arqade</p>
-          </div>
-          <div className="landingpage__content">
-            <h4>
-              Discounts made fun
-              <img src={controllerEmoji} alt="wave" />
-            </h4>
-            <p>
-              Do you like discounts? Of course you do, discounts are awesome. But scraping together
-              promo codes or waiting for sale? Decidedly not awesome. We at Arqade think receiving
-              discounts should be as fun as the discounts themselves.
-            </p>
-          </div>
-          <div className="landingpage__buttons">
-            <Link className="cta1" to="try" spy smooth duration={1000}>
-              Try it yourself
-            </Link>
-            <a
-              href="https://zenobruinsma.typeform.com/to/YnIZnL"
-              data-mode="popup"
-              className="cta2"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Get early access
-            </a>
-          </div>
->>>>>>> 83e7acc6eb12f0aa130ec5b31aab48df00a108d3
         </div>
         <Element name="try">
           <div name="ProductContainer" className="ProductContainer">
@@ -234,10 +198,10 @@ class App extends Component {
         <div className="landingpage__usps">
           <div className="usp">
             <img src={laughingEmoji} alt="wave" />
+            <div className="bigtext">=</div>
             <img src={chartEmoji} alt="wave" />
             <h5>Fun increases conversion</h5>
-            <p>
-              Studies have shown fun increases conversion. Why not make use of
+            <p>Studies have shown fun increases conversion. Why not make use of
               it? :)
             </p>
           </div>
@@ -251,6 +215,8 @@ class App extends Component {
             </p>
           </div>
           <div className="usp">
+            <img src={artistEmoji} alt="wave" />
+            <img src={wrenchEmoji} alt="wave" />
             <h5>Custom tailored</h5>
             <p>
               From colors to size and content, we can customize everything based
