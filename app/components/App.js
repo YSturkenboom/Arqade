@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link, Element } from 'react-scroll';
+import Favicon from 'react-favicon';
 import ProductCard from './ProductCard';
 import Contact from './Contact';
 import Popup from './Popup';
@@ -152,6 +153,7 @@ class App extends Component {
     const { popupVisible, activeQuestionNum } = this.state;
     return (
       <div className="landingpage">
+        <Favicon url={controllerEmoji} />
         <div className="view_height">
           <div className="landingpage__logo">
             <p>Arqade</p>
