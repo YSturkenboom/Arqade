@@ -66,7 +66,7 @@ const QUESTIONS = [
 const CARDS = [
   {
     logo: hm,
-    subtitle: null,
+    subtitle: 'Play and get 15% off!',
     title: 'Men’s Original 500 Boots',
     productImage: boots,
     background: '#4ad4fd',
@@ -77,7 +77,7 @@ const CARDS = [
   },
   {
     logo: vinylLogo,
-    subtitle: null,
+    subtitle: 'Play and get 10% off!',
     title: 'Bob Dylan 12" Album',
     productImage: bobDylan,
     background: '#DE4329',
@@ -89,7 +89,7 @@ const CARDS = [
 
   {
     logo: nikeLogo,
-    subtitle: null,
+    subtitle: 'Play and get 15% off!',
     title: 'Paris Saint Germain Squad Top',
     productImage: nikeShirt,
     background: COLORS.white,
@@ -101,7 +101,7 @@ const CARDS = [
 
   {
     logo: PlaystationLogo,
-    subtitle: null,
+    subtitle: 'Play and get 20% off!',
     title: 'Sony DualShock 4 Controller',
     productImage: controller,
     background: COLORS.black,
@@ -168,12 +168,12 @@ class App extends Component {
           <div className="landingpage__buttons">
             <Link
               className="cta1"
-              to="mission"
+              to="try"
               spy
               smooth
               duration={1000}
             >
-              Our thoughts
+              Try it yourself
             </Link>
             <a
               href="https://zenobruinsma.typeform.com/to/YnIZnL"
@@ -182,20 +182,21 @@ class App extends Component {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Share your thoughts
+              Get early access
             </a>
           </div>
         </div>
-        <div name="ProductContainer" className="ProductContainer">
-          {cards}
-        </div>
+        <Element name="try">
+          <div name="ProductContainer" className="ProductContainer">
+            {cards}
+          </div>
+        </Element>
         <div className="landingpage__content">
-          <Element name="mission">
-            <h4>
-              Our thoughts
-              <img src={rocketEmoji} alt="wave" />
-            </h4>
-          </Element>
+          <h4>
+            Our thoughts
+            <img src={rocketEmoji} alt="wave" />
+          </h4>
+
           <p>
             We dont have a really cool origin story to put here, no discovering
             ourselves on a trip to Thailand or prophetic dreams or something
