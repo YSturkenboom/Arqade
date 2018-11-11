@@ -26,15 +26,18 @@ const BACKGROUNDS = [
     backgroundImage: `linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(255,255,255,0.66) 50%,rgba(255,255,255,1) 77%,rgba(255,255,255,1) 99%,rgba(255,255,255,1) 100%), url(${bobDylanBg})`,
   },
   {
-    backgroundImage: "linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(255,255,255,0.66) 50%,rgba(255,255,255,1) 77%,rgba(255,255,255,1) 99%,rgba(255,255,255,1) 100%), url('../images/arqade_bg.jpg')",
+    backgroundImage:
+      "linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(255,255,255,0.66) 50%,rgba(255,255,255,1) 77%,rgba(255,255,255,1) 99%,rgba(255,255,255,1) 100%), url('../images/arqade_bg.jpg')",
   },
   {
-    backgroundImage: "linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(255,255,255,0.66) 50%,rgba(255,255,255,1) 77%,rgba(255,255,255,1) 99%,rgba(255,255,255,1) 100%), url('../images/nike_bg.jpg')",
+    backgroundImage:
+      "linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(255,255,255,0.66) 50%,rgba(255,255,255,1) 77%,rgba(255,255,255,1) 99%,rgba(255,255,255,1) 100%), url('../images/nike_bg.jpg')",
   },
   {
-    backgroundImage: "linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(255,255,255,0.66) 50%,rgba(255,255,255,1) 77%,rgba(255,255,255,1) 99%,rgba(255,255,255,1) 100%), url('../images/nike_bg.jpg')",
+    backgroundImage:
+      "linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(255,255,255,0.66) 50%,rgba(255,255,255,1) 77%,rgba(255,255,255,1) 99%,rgba(255,255,255,1) 100%), url('../images/nike_bg.jpg')",
   },
-]
+];
 
 const QUESTIONS = [
   {
@@ -48,7 +51,8 @@ const QUESTIONS = [
     correctAnswer: 1,
   },
   {
-    question: 'Nike is an American corporation specializing in the sale of sports equipment. In which state would you find their headquarters?',
+    question:
+      'Nike is an American corporation specializing in the sale of sports equipment. In which state would you find their headquarters?',
     answers: ['Oregon', 'California', 'Washington', 'New York'],
     correctAnswer: 1,
   },
@@ -57,13 +61,12 @@ const QUESTIONS = [
     answers: ['b', 'd', 'sd', 'fgd yhr'],
     correctAnswer: 1,
   },
-]
+];
 
 const CARDS = [
   {
     logo: hm,
-    subtitle:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.',
+    subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.',
     title: 'Men’s original 500 boots',
     productImage: boots,
     background: '#4ad4fd',
@@ -74,8 +77,7 @@ const CARDS = [
   },
   {
     logo: vinylLogo,
-    subtitle:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.',
+    subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.',
     title: 'Bob Dylan 12" Album',
     productImage: bobDylan,
     background: '#DE4329',
@@ -87,8 +89,7 @@ const CARDS = [
 
   {
     logo: nikeLogo,
-    subtitle:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.',
+    subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.',
     title: 'Paris saint germain squad top',
     productImage: nikeShirt,
     background: COLORS.white,
@@ -100,8 +101,7 @@ const CARDS = [
 
   {
     logo: PlaystationLogo,
-    subtitle:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.',
+    subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.',
     title: 'Sony DualShock 4 Controller',
     productImage: controller,
     background: COLORS.black,
@@ -125,7 +125,7 @@ class App extends Component {
 
   hidePopup = () => {
     this.setState({ popupVisible: false });
-  }
+  };
 
   render() {
     const cards = CARDS.map(card => (
@@ -156,20 +156,13 @@ class App extends Component {
               <img src={waveHand} alt="wave" />
             </h4>
             <p>
-              Do you like discounts? Of course you do, discounts are awesome.
-              But scraping together promo codes or waiting for sale? Decidedly
-              not awesome. We at Arqade think receiving discounts should be as
-              fun as the discounts themselves.
+              Do you like discounts? Of course you do, discounts are awesome. But scraping together
+              promo codes or waiting for sale? Decidedly not awesome. We at Arqade think receiving
+              discounts should be as fun as the discounts themselves.
             </p>
           </div>
           <div className="landingpage__buttons">
-            <Link
-              className="cta1"
-              to="ProductContainer"
-              spy
-              smooth
-              duration={1000}
-            >
+            <Link className="cta1" to="ProductContainer" spy smooth duration={1000}>
               Get discount
             </Link>
             <a
@@ -186,15 +179,13 @@ class App extends Component {
         <div name="ProductContainer" className="ProductContainer">
           {cards}
         </div>
-        {(popupVisible === true)
-          && (
-            <Popup
-              onClose={() => this.hidePopup()}
-              content={QUESTIONS[activeQuestionNum]}
-              background={BACKGROUNDS[activeQuestionNum]}
-            />
-          )
-        }
+        {popupVisible === true && (
+          <Popup
+            onClose={() => this.hidePopup()}
+            content={QUESTIONS[activeQuestionNum]}
+            background={BACKGROUNDS[activeQuestionNum]}
+          />
+        )}
       </div>
     );
   }

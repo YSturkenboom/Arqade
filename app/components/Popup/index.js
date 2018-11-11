@@ -13,7 +13,7 @@ class Popup extends Component {
       finished: false,
       maxSeconds: 7,
     };
-
+  }
 
   componentDidMount() {
     this.interval = setInterval(() => this.tick(), 10);
@@ -57,9 +57,43 @@ class Popup extends Component {
         return (
           <div className="popup">
             <div className="popup_inner" style={background}>
-              {correct ? <h4>Lol nice.</h4> : <h4>Ha you suck</h4>}
+              {correct ? (
+                <div className="notime">
+                  <h4 className="message">Wow , </h4>
+                  <p>But don’t worry, for now you can try as many times as you want :)</p>
+
+                  <img src="https://media.giphy.com/media/AszIaSlJKPRX4j2zqP/giphy.gif" alt="gif" />
+
+                  <a
+                    href="https://zenobruinsma.typeform.com/to/YnIZnL"
+                    data-mode="popup"
+                    className="cta2"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Write a review
+                  </a>
+                </div>
+              ) : (
+                <div className="notime">
+                  <h4 className="message">Oops, you have to answer within 10 seconds.</h4>
+                  <p>But don’t worry, for now you can try as many times as you want :)</p>
+
+                  <img src="https://media.giphy.com/media/yoJC2Olx0ekMy2nX7W/giphy.gif" alt="gif" />
+
+                  <a
+                    href="https://zenobruinsma.typeform.com/to/YnIZnL"
+                    data-mode="popup"
+                    className="cta2"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Write a review
+                  </a>
+                </div>
+              )}
               <button type="button" className="closeButton" onClick={() => onClose()}>
-                x
+                ×
               </button>
             </div>
           </div>
@@ -73,6 +107,8 @@ class Popup extends Component {
               <div className="notime">
                 <h4 className="message">Oops, you have to answer within 10 seconds.</h4>
                 <p>But don’t worry, for now you can try as many times as you want :)</p>
+
+                <img src="https://media.giphy.com/media/xUySTEJYS5F1Cayg92/giphy.gif" alt="gif" />
 
                 <a
                   href="https://zenobruinsma.typeform.com/to/YnIZnL"
