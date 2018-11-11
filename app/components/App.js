@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-scroll';
+import { Link, Element } from 'react-scroll';
 import ProductCard from './ProductCard';
 import Popup from './Popup';
 import hm from '../assets/images/hm_logo.png';
@@ -163,8 +163,14 @@ class App extends Component {
             </p>
           </div>
           <div className="landingpage__buttons">
-            <Link className="cta1" to="ProductContainer" spy smooth duration={1000}>
-              Play!
+            <Link
+              className="cta1"
+              to="mission"
+              spy
+              smooth
+              duration={1000}
+            >
+              Our thoughts
             </Link>
             <a
               href="https://zenobruinsma.typeform.com/to/YnIZnL"
@@ -173,32 +179,44 @@ class App extends Component {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Write a review
+              Share your thoughts
             </a>
           </div>
         </div>
         <div name="ProductContainer" className="ProductContainer">
           {cards}
         </div>
-        <div className="landingpage__content">
-          <h4>
-            Our mission
-            <img src={rocketEmoji} alt="wave" />
-          </h4>
-          <p>
-            We dont have a really cool origin story to put here, no discovering ourselves on a trip
-            to Thailand or prophetic dreams or something like that. <br />
-            <br />
-            But what we do have is a desire to make buying stuff online more{' '}
-            <span className="pulse">fun</span>. We&#39;re three guys in the Netherlands trying to
-            make useful, fun and exciting products for you, whoever you might be.
-            <br />
-            <br />
-            We would love it if you came along on our journey. We&#39;re very excited about Arqade,
-            but we would love some input from the community! How can we make your experience better?
-            Do you have suggestions for a new feature? Drop us a line! We would love to hear your
-            thoughts.
-          </p>
+        <Element name="mission">
+          <div className="landingpage__content">
+            <h4>
+              Our mission
+              <img src={rocketEmoji} alt="wave" />
+            </h4>
+            <p>
+              We dont have a really cool origin story to put here, no discovering
+              ourselves on a trip to Thailand or prophetic dreams or something
+              like that. <br /><br />But what we do have is a desire to make
+              buying stuff online more <span className="pulse">fun</span>.
+              We&#39;re three guys in the Netherlands trying to make useful, fun and
+              exciting products for you, whoever you might be.
+              <br /><br />
+              We would love it if you came along on our journey. We&#39;re very excited
+              about Arqade, but we would love some input from the community! How
+              can we make your experience better? Do you have suggestions for a
+              new feature? Drop us a line! We would love to hear your thoughts.
+            </p>
+          </div>
+        </Element>
+        <div className="landingpage__buttons">
+          <a
+            href="https://zenobruinsma.typeform.com/to/YnIZnL"
+            data-mode="popup"
+            className="cta1 center"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Share your thoughts
+          </a>
         </div>
         {popupVisible === true && (
           <Popup
