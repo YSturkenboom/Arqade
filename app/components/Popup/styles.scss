@@ -1,3 +1,11 @@
+$max-width-xs: 767px;
+
+@mixin max-xs {
+  @media (max-width: $max-width-xs) {
+    @content;
+  }
+}
+
 .popup {
   position: fixed;
   width: 100%;
@@ -21,6 +29,13 @@
   border-radius: 5px;
   background-size: cover;
   background-position: center;
+
+  @include max-xs {
+    left: 5%;
+    right: 5%;
+    top: 5%;
+    bottom: 5%;
+  }
 
   svg {
     height: 20px;
@@ -80,6 +95,10 @@
       margin: 0 auto;
       margin-bottom: 60px;
       border-radius: 5px;
+
+      @include max-xs {
+        width: 200px;
+      }
     }
   }
 }
@@ -87,6 +106,10 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+
+  @include max-xs {
+    flex-direction: column;
+  }
 }
 .closeButton {
   position: absolute;
@@ -153,5 +176,6 @@ h4 {
 }
 
 .card-btn {
-  color: blue;
+  font-size: 18px;
+  padding: 10px;
 }
