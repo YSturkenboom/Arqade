@@ -35,7 +35,7 @@ const BACKGROUNDS = [
   {
     backgroundImage: "linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(255,255,255,0.66) 50%,rgba(255,255,255,1) 77%,rgba(255,255,255,1) 99%,rgba(255,255,255,1) 100%), url('../images/nike_bg.jpg')",
   },
-]
+];
 
 const QUESTIONS = [
   {
@@ -58,7 +58,7 @@ const QUESTIONS = [
     answers: ['b', 'd', 'sd', 'fgd yhr'],
     correctAnswer: 1,
   },
-]
+];
 
 const CARDS = [
   {
@@ -171,7 +171,7 @@ class App extends Component {
               smooth
               duration={1000}
             >
-              Play!
+              Our thoughts
             </Link>
             <a
               href="https://zenobruinsma.typeform.com/to/YnIZnL"
@@ -180,7 +180,7 @@ class App extends Component {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Write a review
+              Share your thoughts
             </a>
           </div>
         </div>
