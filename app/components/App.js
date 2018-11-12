@@ -165,7 +165,7 @@ class App extends Component {
             Try it out yourself
           </Link>
           <Link className="nav2" to="why" spy smooth duration={1000}>
-            Why we made it
+            Why Arqade
           </Link>
           <Link className="nav2 cta1" to="integration" spy smooth duration={1000}>
             Integrate it on your site
@@ -201,6 +201,12 @@ class App extends Component {
             {cards}
           </div>
         </Element>
+
+        <div className="landingpage__content">
+          <h4>
+            Why Arqade
+          </h4>
+        </div>
 
         <div className="landingpage__usps">
           <Element name="why" />
