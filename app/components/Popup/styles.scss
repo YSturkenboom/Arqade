@@ -21,8 +21,8 @@ $max-width-xs: 767px;
   position: absolute;
   left: 20%;
   right: 20%;
-  top: 15%;
-  bottom: 15%;
+  top: 10%;
+  bottom: 10%;
   margin: auto;
   background: white;
   padding: 10px;
@@ -51,6 +51,7 @@ $max-width-xs: 767px;
     -webkit-animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
     animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
     padding-top: 50px;
+
     .message {
       margin-bottom: 0;
     }
@@ -88,6 +89,18 @@ $max-width-xs: 767px;
       }
     }
 
+    .btn--white {
+      background: transparent;
+      color: black;
+      margin-top: 15px;
+    }
+
+    .popupBtns {
+        display: flex;
+        flex-direction: column;
+        justify-content:space-between;
+    }
+
     img {
       width: 300px;
       height: auto;
@@ -99,6 +112,14 @@ $max-width-xs: 767px;
       @include max-xs {
         width: 200px;
       }
+    }
+
+    .emoji {
+      width: 40px;
+      height: auto;
+      display: inline;
+      margin: 0 10px;
+      vertical-align: -0.2em;
     }
   }
 }
@@ -134,7 +155,7 @@ h4 {
   text-align: center;
   margin: 50px;
   font-family: Cera-Bold, sans-serif;
-  font-size: 24px;
+  font-size: 35px;
   color: #000;
   letter-spacing: 0;
   margin-bottom: 150px;

@@ -13,7 +13,7 @@ import vinylLogo from '../assets/images/vinyl_logo.png';
 import bobDylan from '../assets/images/bobdylan_lp.png';
 // import controllerEmoji from '../assets/images/controller_emoji.png';
 import joystickEmoji from '../assets/images/joystick_emoji.png';
-import rocketEmoji from '../assets/images/rocket_emoji.png';
+// import rocketEmoji from '../assets/images/rocket_emoji.png';
 import laughingEmoji from '../assets/images/laughing_emoji.png';
 import chartEmoji from '../assets/images/chart_emoji.png';
 import eyesEmoji from '../assets/images/eyes_emoji.png';
@@ -75,7 +75,7 @@ const QUESTIONS = [
 const CARDS = [
   {
     logo: hm,
-    subtitle: 'Play and get 15% off!',
+    subtitle: 'Play and get 10% off!',
     title: 'Men’s Original 500 Boots',
     productImage: boots,
     background: '#4ad4fd',
@@ -98,7 +98,7 @@ const CARDS = [
 
   {
     logo: nikeLogo,
-    subtitle: 'Play and get 15% off!',
+    subtitle: 'Play and get 10% off!',
     title: 'Paris Saint Germain Squad Top',
     productImage: nikeShirt,
     background: COLORS.white,
@@ -110,7 +110,7 @@ const CARDS = [
 
   {
     logo: PlaystationLogo,
-    subtitle: 'Play and get 20% off!',
+    subtitle: 'Play and get 10% off!',
     title: 'Sony DualShock 4 Controller',
     productImage: controller,
     background: COLORS.black,
@@ -161,6 +161,15 @@ class App extends Component {
       <div className="landingpage">
         <div className="landingpage__logo">
           <p>Arqade</p>
+          <Link className="nav2" to="try" spy smooth duration={1000}>
+            Try it out yourself
+          </Link>
+          <Link className="nav2" to="why" spy smooth duration={1000}>
+            Why we made it
+          </Link>
+          <Link className="nav2 cta1" to="integration" spy smooth duration={1000}>
+            Integrate it on your site
+          </Link>
         </div>
         <div className="landingpage__content">
           <h4>
@@ -168,40 +177,39 @@ class App extends Component {
             <img src={joystickEmoji} alt="wave" />
           </h4>
           <p>
-            Do you like discounts? Of course you do, discounts are awesome. But scraping together
+            Everyone likes discounts, discounts are awesome. But scraping together
             promo codes or waiting for sale? Decidedly not awesome. We at Arqade think receiving
             discounts should be as fun as the discounts themselves.
           </p>
         </div>
+
         <div className="landingpage__buttons">
-          <Link className="cta1" to="try" spy smooth duration={1000}>
-            Try it yourself
+          <Link className="cta1" to="integration" spy smooth duration={1000}>
+            Integrate it on my website
           </Link>
-          <a
-            href="https://zenobruinsma.typeform.com/to/YnIZnL"
-            data-mode="popup"
-            className="cta2"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Get early access
-          </a>
+          <Link className="cta2" to="try" spy smooth duration={1000}>
+            Try it out yourself
+          </Link>
         </div>
+
         <div className="h-bar-text">
           <span className="bar" /><span className="bar-text">Examples of Arqade integrations</span><span className="bar" />
         </div>
+
         <Element name="try">
           <div name="ProductContainer" className="ProductContainer">
             {cards}
           </div>
         </Element>
+
         <div className="landingpage__usps">
+          <Element name="why" />
           <div className="usp">
             <img src={laughingEmoji} alt="wave" />
             <div className="bigtext">=</div>
             <img src={chartEmoji} alt="wave" />
             <h5>Fun increases conversion</h5>
-            <p>Studies have shown fun increases conversion. Why not make use of
+            <p>Studies have shown <span className="pulse">fun</span> increases conversion. Why not make use of
               it? :)
             </p>
           </div>
@@ -217,71 +225,24 @@ class App extends Component {
           <div className="usp">
             <img src={artistEmoji} alt="wave" />
             <img src={wrenchEmoji} alt="wave" />
-            <h5>Custom tailored</h5>
+            <h5>Tailor-made</h5>
             <p>
               From colors to size and content, we can customize everything based
               on your need.
             </p>
           </div>
         </div>
-        <div className="landingpage__content">
-          <h4>
-            Our thoughts
-            <img src={rocketEmoji} alt="wave" />
-          </h4>
 
-          <p>
-            We dont have a really cool origin story to put here, no discovering ourselves on a trip
-            to Thailand or prophetic dreams or something like that. <br />
-            <br />
-            But what we do have is a desire to make buying stuff online more{' '}
-            <span className="pulse">fun</span>. We&#39;re three guys in the Netherlands trying to
-            make useful, fun and exciting products for you.
-            <br />
-            <br />
-            We would love it if you came along on our journey. We&#39;re very excited about Arqade,
-            but we want to evolve Arqade into a great product people love, and so we would love some
-            input from the community!
-            <br />
-            <br />
-            How can we make your experience better? Do you have feature suggestions? Drop us a line,
-            or chat with us via the button in the bottom-right corner! We would love to hear your
-            thoughts.
-          </p>
-        </div>
-        <div className="landingpage__buttons">
-          <a
-            href="https://zenobruinsma.typeform.com/to/YnIZnL"
-            data-mode="popup"
-            className="cta1 center"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Share your thoughts
-          </a>
-        </div>
-
-        <div className="landingpage__content">
-          <h4>
-            Are you a e-commerce business owner, or do you sell your product online?
-            <img src={rocketEmoji} alt="wave" />
-          </h4>
-
-          <p>
-            Then we are interested in providing a custom integration into your website
-            to test our idea. As an early adopter you&#39;ll be uniquely able to help shape
-            the final product, and of course
-          </p>
-        </div>
+        <Element name="integration" />
+        <Contact />
 
         {popupVisible === true && (
-          <Popup
-            onClose={() => this.hidePopup()}
-            content={QUESTIONS[activeQuestionNum]}
-            background={BACKGROUNDS[activeQuestionNum]}
-          />
+        <Popup
+          onClose={() => this.hidePopup()}
+          content={QUESTIONS[activeQuestionNum]}
+          background={BACKGROUNDS[activeQuestionNum]}
+        />
         )}
-        <Contact />
       </div>
     );
   }

@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 import { Line } from 'rc-progress';
+import { Link } from 'react-scroll';
 
 import './styles.scss';
+import partyEmoji from '../../assets/images/party_emoji.png';
+import sadEmoji from '../../assets/images/sad_emoji.png';
 
 class Popup extends Component {
   constructor(props) {
@@ -59,38 +62,39 @@ class Popup extends Component {
             <div className="popup_inner" style={background}>
               {correct ? (
                 <div className="notime">
-                  <h4 className="message">Wow! That's correct!</h4>
-                  <p>Sorry, we can't offer you the discount yet... But if you tell
-                    us what you think soon we will!<br /></p>
+                  <h4 className="message">Wow! That's correct!<br />You get 10% off!
+                  <img src={partyEmoji} className="emoji"/></h4>
+                  <p>
+                    Well not really, but it does work if it's integrated on your
+                    website!
+                  </p>
 
                   <img src="https://media.giphy.com/media/AszIaSlJKPRX4j2zqP/giphy.gif" alt="gif" />
 
-                  <a
-                    href="https://zenobruinsma.typeform.com/to/YnIZnL"
-                    data-mode="popup"
-                    className="cta2 card-btn"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Share your thoughts
-                  </a>
+                  <div className="popupBtns">
+                    <Link className="cta1 card-btn" to="integration" spy smooth duration={1000} onClick={() => onClose()}>
+                      I want this on my website
+                    </Link>
+                    <Link className="cta2 card-btn btn--white" to="try" spy smooth duration={1000} onClick={() => onClose()}>
+                      Close window
+                    </Link>
+                  </div>
                 </div>
               ) : (
                 <div className="notime">
-                  <h4 className="message">Sorry! That is not the right answer.</h4>
-                  <p>But don’t worry, for now you can try as many times as you want :)</p>
+                  <h4 className="message">Sorry, the answer you gave was wrong <img src={sadEmoji} className="emoji"/></h4>
+                  <p>Luckily you can try again unlimited times for now :)</p>
 
                   <img src="https://media.giphy.com/media/yoJC2Olx0ekMy2nX7W/giphy.gif" alt="gif" />
 
-                  <a
-                    href="https://zenobruinsma.typeform.com/to/YnIZnL"
-                    data-mode="popup"
-                    className="cta2 card-btn"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Share your thoughts
-                  </a>
+                  <div className="popupBtns">
+                    <Link className="cta1 card-btn" to="asdf" spy smooth duration={1000} onClick={() => this.setState({seconds: 0, finished: false, correct: null})}>
+                      Try again
+                    </Link>
+                    <Link className="cta2 card-btn btn--white" to="try" spy smooth duration={1000} onClick={() => onClose()}>
+                      Close window
+                    </Link>
+                  </div>
                 </div>
               )}
               <button type="button" className="closeButton" onClick={() => onClose()}>
@@ -111,15 +115,14 @@ class Popup extends Component {
 
                 <img src="https://media.giphy.com/media/xUySTEJYS5F1Cayg92/giphy.gif" alt="gif" />
 
-                <a
-                  href="https://zenobruinsma.typeform.com/to/YnIZnL"
-                  data-mode="popup"
-                  className="cta2 card-btn"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Share your thoughts
-                </a>
+                <div className="popupBtns">
+                  <Link className="cta1 card-btn" to="asdf" spy smooth duration={1000} onClick={() => this.setState({seconds: 0, finished: false, correct: null})}>
+                    Try again
+                  </Link>
+                  <Link className="cta2 card-btn btn--white" to="try" spy smooth duration={1000} onClick={() => onClose()}>
+                    Close window
+                  </Link>
+                </div>
               </div>
             ) : (
               <div>
