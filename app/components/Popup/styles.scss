@@ -19,10 +19,10 @@ $max-width-xs: 767px;
 }
 .popup_inner {
   position: absolute;
-  left: 20%;
-  right: 20%;
-  top: 10%;
-  bottom: 10%;
+  left: 15%;
+  right: 15%;
+  top: 5%;
+  bottom: 5%;
   margin: auto;
   background: white;
   padding: 10px;
@@ -63,8 +63,8 @@ $max-width-xs: 767px;
       width: 80%;
       text-align: center;
       margin: 0 auto;
-      margin-top: 30px;
-      margin-bottom: 50px;
+      margin-top: 15px;
+      margin-bottom: 25px;
     }
 
     a {
@@ -92,13 +92,11 @@ $max-width-xs: 767px;
     .btn--white {
       background: transparent;
       color: black;
-      margin-top: 15px;
     }
 
     .popupBtns {
-        display: flex;
-        flex-direction: column;
-        justify-content:space-between;
+      display: flex;
+      justify-content: space-between;
     }
 
     img {
@@ -134,8 +132,8 @@ $max-width-xs: 767px;
 }
 .closeButton {
   position: absolute;
-  top: 25px;
-  right: 25px;
+  top: 15px;
+  right: 15px;
   background: transparent;
   border-radius: 50px;
   width: 50px;
@@ -144,7 +142,6 @@ $max-width-xs: 767px;
   font-size: 20px;
   box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.1);
   cursor: pointer;
-  padding-top: 5px;
 
   &:hover {
     background: black;

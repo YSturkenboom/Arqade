@@ -20,6 +20,11 @@ $max-width-xs: 767px;
     letter-spacing: 0;
     margin-bottom: 0;
     text-align: center;
+
+    @include max-xs {
+      font-size: 32px;
+      width: 90%;
+    }
   }
 
   p {
@@ -61,10 +66,20 @@ $max-width-xs: 767px;
       display: flex;
       .input:nth-child(1) {
         margin-right: 10px;
+        @include max-xs {
+          margin-right: 0;
+        }
       }
 
       .input:nth-child(2) {
         margin-left: 10px;
+        @include max-xs {
+          margin-left: 0;
+        }
+      }
+
+      @include max-xs {
+        flex-direction: column;
       }
     }
 
@@ -126,6 +141,10 @@ $max-width-xs: 767px;
         background: transparent;
         border: 1px solid black;
         color: black;
+      }
+
+      @include max-xs {
+        width: 100%;
       }
     }
 

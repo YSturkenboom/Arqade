@@ -193,7 +193,7 @@ class App extends Component {
         </div>
 
         <div className="h-bar-text">
-          <span className="bar" /><span className="bar-text">Examples of Arqade integrations</span><span className="bar" />
+          <span className="bar" /><span className="bar-text">Examples of possible Arqade integrations</span><span className="bar" />
         </div>
 
         <Element name="try">

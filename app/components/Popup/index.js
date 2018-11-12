@@ -14,7 +14,7 @@ class Popup extends Component {
       seconds: 0,
       correct: null,
       finished: false,
-      maxSeconds: 7,
+      maxSeconds: 9,
     };
   }
 
@@ -62,36 +62,67 @@ class Popup extends Component {
             <div className="popup_inner" style={background}>
               {correct ? (
                 <div className="notime">
-                  <h4 className="message">Wow! That's correct!<br />You get 10% off!
-                  <img src={partyEmoji} className="emoji"/></h4>
-                  <p>
-                    Well not really, but it does work if it's integrated on your
-                    website!
-                  </p>
+                  <h4 className="message">
+                    Wow! That's correct!
+                    <br />
+                    You get 10% off!
+                    <img src={partyEmoji} className="emoji" />
+                  </h4>
+                  <p>Well not really, but it does work if it's integrated on your website!</p>
 
                   <img src="https://media.giphy.com/media/AszIaSlJKPRX4j2zqP/giphy.gif" alt="gif" />
 
                   <div className="popupBtns">
-                    <Link className="cta1 card-btn event-integrate-button" to="integration" spy smooth duration={1000} onClick={() => onClose()}>
+                    <Link
+                      className="cta1 card-btn event-integrate-button"
+                      to="integration"
+                      spy
+                      smooth
+                      duration={1000}
+                      onClick={() => onClose()}
+                    >
                       I want this on my website
                     </Link>
-                    <Link className="cta2 card-btn btn--white event-close-popup" to="try" spy smooth duration={1000} onClick={() => onClose()}>
+                    <Link
+                      className="cta2 card-btn btn--white event-close-popup"
+                      to="try"
+                      spy
+                      smooth
+                      duration={1000}
+                      onClick={() => onClose()}
+                    >
                       Close window
                     </Link>
                   </div>
                 </div>
               ) : (
                 <div className="notime">
-                  <h4 className="message">Sorry, the answer you gave was wrong <img src={sadEmoji} className="emoji"/></h4>
+                  <h4 className="message">
+                    Sorry, the answer you gave was wrong <img src={sadEmoji} className="emoji" />
+                  </h4>
                   <p>Luckily you can try again unlimited times for now :)</p>
 
                   <img src="https://media.giphy.com/media/yoJC2Olx0ekMy2nX7W/giphy.gif" alt="gif" />
 
                   <div className="popupBtns">
-                    <Link className="cta1 card-btn event-try-again" to="asdf" spy smooth duration={1000} onClick={() => this.setState({seconds: 0, finished: false, correct: null})}>
+                    <Link
+                      className="cta1 card-btn event-try-again"
+                      to="asdf"
+                      spy
+                      smooth
+                      duration={1000}
+                      onClick={() => this.setState({ seconds: 0, finished: false, correct: null })}
+                    >
                       Try again
                     </Link>
-                    <Link className="cta2 card-btn btn--white event-close-popup" to="try" spy smooth duration={1000} onClick={() => onClose()}>
+                    <Link
+                      className="cta2 card-btn btn--white event-close-popup"
+                      to="try"
+                      spy
+                      smooth
+                      duration={1000}
+                      onClick={() => onClose()}
+                    >
                       Close window
                     </Link>
                   </div>
@@ -116,10 +147,24 @@ class Popup extends Component {
                 <img src="https://media.giphy.com/media/xUySTEJYS5F1Cayg92/giphy.gif" alt="gif" />
 
                 <div className="popupBtns">
-                  <Link className="cta1 card-btn event-try-again" to="asdf" spy smooth duration={1000} onClick={() => this.setState({seconds: 0, finished: false, correct: null})}>
+                  <Link
+                    className="cta1 card-btn event-try-again"
+                    to="asdf"
+                    spy
+                    smooth
+                    duration={1000}
+                    onClick={() => this.setState({ seconds: 0, finished: false, correct: null })}
+                  >
                     Try again
                   </Link>
-                  <Link className="cta2 card-btn btn--white event-close-popup" to="try" spy smooth duration={1000} onClick={() => onClose()}>
+                  <Link
+                    className="cta2 card-btn btn--white event-close-popup"
+                    to="try"
+                    spy
+                    smooth
+                    duration={1000}
+                    onClick={() => onClose()}
+                  >
                     Close window
                   </Link>
                 </div>
