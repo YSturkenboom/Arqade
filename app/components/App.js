@@ -161,13 +161,13 @@ class App extends Component {
       <div className="landingpage">
         <div className="landingpage__logo">
           <p>Arqade</p>
-          <Link className="nav2" to="try" spy smooth duration={1000}>
+          <Link className="nav2 event-try-button" to="try" spy smooth duration={1000}>
             Try it out yourself
           </Link>
-          <Link className="nav2" to="why" spy smooth duration={1000}>
+          <Link className="nav2 event-why-arqade-button" to="why" spy smooth duration={1000}>
             Why Arqade
           </Link>
-          <Link className="nav2 cta1" to="integration" spy smooth duration={1000}>
+          <Link className="nav2 cta1 event-integrate-button" to="integration" spy smooth duration={1000}>
             Integrate it on your site
           </Link>
         </div>
@@ -184,10 +184,10 @@ class App extends Component {
         </div>
 
         <div className="landingpage__buttons">
-          <Link className="cta1" to="integration" spy smooth duration={1000}>
+          <Link className="cta1 event-integrate-button" to="integration" spy smooth duration={1000}>
             Integrate it on my website
           </Link>
-          <Link className="cta2" to="try" spy smooth duration={1000}>
+          <Link className="cta2 event-try-button" to="try" spy smooth duration={1000}>
             Try it out yourself
           </Link>
         </div>
