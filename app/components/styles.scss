@@ -153,9 +153,13 @@ $desktop-width: 1024px;
 
       @include max-xs {
         font-size: 16px;
+<<<<<<< HEAD
         margin-top: 15px;
         line-height: 2em;
         opacity: 1;
+=======
+        line-height: 28px;
+>>>>>>> ff2ac110cdc66e8899a1ac4d91249467d0ef4666
       }
     }
 
@@ -276,6 +280,20 @@ $desktop-width: 1024px;
     }
   }
 
+  &__why {
+    padding-top: 40px;
+
+    h4 {
+      font-size: 38px;
+      line-height: 77px;
+      margin: 40px;
+
+      @include max-xs {
+        font-size: 32px;
+      }
+    }
+  }
+
   &__usps {
     display: flex;
     flex-direction: row;
@@ -338,6 +356,7 @@ $desktop-width: 1024px;
       flex-direction: column;
       text-align: center;
       margin-bottom: 0;
+      margin-top: -20px;
     }
   }
 }
@@ -350,7 +369,6 @@ $desktop-width: 1024px;
   flex-wrap: wrap;
   justify-content: space-around;
   margin: 40px auto;
-  margin-bottom: 150px;
 }
 
 .landing {
@@ -562,7 +580,11 @@ body {
     margin-top: 10px;
 
     @include max-xs {
+<<<<<<< HEAD
       margin-top: 8px;
+=======
+      margin-top: 20px;
+>>>>>>> ff2ac110cdc66e8899a1ac4d91249467d0ef4666
     }
   }
 
@@ -574,6 +596,10 @@ body {
 
     @include max-xs {
       font-size: 12px;
+<<<<<<< HEAD
+=======
+      line-height: 37px;
+>>>>>>> ff2ac110cdc66e8899a1ac4d91249467d0ef4666
     }
   }
 }

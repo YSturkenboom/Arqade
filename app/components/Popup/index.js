@@ -14,7 +14,7 @@ class Popup extends Component {
       seconds: 0,
       correct: null,
       finished: false,
-      maxSeconds: 9,
+      maxSeconds: 10,
     };
   }
 

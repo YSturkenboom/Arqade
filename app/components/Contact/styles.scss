@@ -20,6 +20,7 @@ $max-width-xs: 767px;
     letter-spacing: 0;
     margin-bottom: 0;
     text-align: center;
+    margin: 0;
 
     @include max-xs {
       font-size: 32px;
@@ -36,7 +37,7 @@ $max-width-xs: 767px;
 
   &__block {
     display: flex;
-    padding: 100px;
+    padding: 50px;
 
     @include max-xs {
       flex-direction: column;
