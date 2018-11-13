@@ -130,7 +130,7 @@ class Contact extends Component {
                     value={message}
                     onChange={this.handleMessage}
                   />
-                  <input className="button" type="submit" value="Submit" />
+                  <input className="button event-submit-form" type="submit" value="Submit" />
                 </Fragment>
               )
             }

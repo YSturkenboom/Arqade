@@ -190,11 +190,11 @@ class App extends Component {
         </div>
 
         <div className="landingpage__buttons">
-          <Link className="cta1 event-integrate-button" to="integration" spy smooth duration={1000}>
-            Integrate it on my site!
-          </Link>
           <Link className="cta2 event-try-button" to="try" spy smooth duration={1000}>
             Try it out yourself
+          </Link>
+          <Link className="cta1 event-integrate-button" to="integration" spy smooth duration={1000}>
+            Integrate it on my site!
           </Link>
         </div>
 
@@ -211,7 +211,7 @@ class App extends Component {
         </Element>
 
         <div className="landingpage__why">
-          <h4>Why Arqade</h4>
+          <h4>Why Arqade?</h4>
         </div>
 
         <div className="landingpage__usps">

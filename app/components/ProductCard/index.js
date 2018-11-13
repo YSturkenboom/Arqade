@@ -62,6 +62,7 @@ class ProductCard extends Component {
             style={buttonStyle}
             type="button"
             onClick={() => popup()}
+            className="event-play-button"
           >
             Play!
           </button>

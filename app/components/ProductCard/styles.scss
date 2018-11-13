@@ -57,6 +57,12 @@ $border-radius: 2.2px;
   }
 }
 
+@mixin max-sm {
+  @media (max-width: $max-width-sm) {
+    @content;
+  }
+}
+
 .ProductCard {
   height: 550px;
   margin: 20px 0;
@@ -73,6 +79,9 @@ $border-radius: 2.2px;
   flex-grow: 0;
   flex-basis: 20%;
 
+  @include max-sm {
+    flex-basis: 40%;
+  }
   @include max-xs {
     flex-basis: 80%;
   }
