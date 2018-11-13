@@ -153,13 +153,9 @@ $desktop-width: 1024px;
 
       @include max-xs {
         font-size: 16px;
-<<<<<<< HEAD
         margin-top: 15px;
         line-height: 2em;
         opacity: 1;
-=======
-        line-height: 28px;
->>>>>>> ff2ac110cdc66e8899a1ac4d91249467d0ef4666
       }
     }
 
@@ -580,11 +576,7 @@ body {
     margin-top: 10px;
 
     @include max-xs {
-<<<<<<< HEAD
       margin-top: 8px;
-=======
-      margin-top: 20px;
->>>>>>> ff2ac110cdc66e8899a1ac4d91249467d0ef4666
     }
   }
 
@@ -596,10 +588,7 @@ body {
 
     @include max-xs {
       font-size: 12px;
-<<<<<<< HEAD
-=======
       line-height: 37px;
->>>>>>> ff2ac110cdc66e8899a1ac4d91249467d0ef4666
     }
   }
 }
