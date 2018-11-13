@@ -167,7 +167,13 @@ class App extends Component {
           <Link className="nav2 event-why-arqade-button" to="why" spy smooth duration={1000}>
             Why Arqade
           </Link>
-          <Link className="nav2 cta1 event-integrate-button" to="integration" spy smooth duration={1000}>
+          <Link
+            className="nav2 cta1 event-integrate-button"
+            to="integration"
+            spy
+            smooth
+            duration={1000}
+          >
             Integrate it on your site
           </Link>
         </div>
@@ -177,9 +183,9 @@ class App extends Component {
             <img src={joystickEmoji} alt="wave" />
           </h4>
           <p>
-            Everyone likes discounts, discounts are awesome. But scraping together
-            promo codes or waiting for sale? Decidedly not awesome. We at Arqade think receiving
-            discounts should be as fun as the discounts themselves.
+            Everyone likes discounts, discounts are awesome. But scraping together promo codes or
+            waiting for sale? Decidedly not awesome. We at Arqade think receiving discounts should
+            be as fun as the discounts themselves.
           </p>
         </div>
 
@@ -193,7 +199,9 @@ class App extends Component {
         </div>
 
         <div className="h-bar-text">
-          <span className="bar" /><span className="bar-text">Examples of possible Arqade integrations</span><span className="bar" />
+          <span className="bar" />
+          <span className="bar-text">Examples of possible Arqade integrations</span>
+          <span className="bar" />
         </div>
 
         <Element name="try">
@@ -202,21 +210,19 @@ class App extends Component {
           </div>
         </Element>
 
-        <div className="landingpage__content">
-          <h4>
-            Why Arqade
-          </h4>
+        <div className="landingpage__why">
+          <h4>Why Arqade</h4>
         </div>
 
         <div className="landingpage__usps">
           <Element name="why" />
           <div className="usp">
-            <img src={laughingEmoji} alt="wave" />
-            <div className="bigtext">=</div>
             <img src={chartEmoji} alt="wave" />
+            <img src={laughingEmoji} alt="wave" />
             <h5>Fun increases conversion</h5>
-            <p>Studies have shown <span className="pulse">fun</span> increases conversion. Why not make use of
-              it? :)
+            <p>
+              Studies have shown <span className="pulse">fun</span> increases conversion. Why not
+              make use of it? :)
             </p>
           </div>
           <div className="usp">
@@ -224,18 +230,15 @@ class App extends Component {
             <img src={eyesEmoji} alt="wave" />
             <h5>Get more traffic</h5>
             <p>
-              Customers can unlock more tries by sharing, following or liking
-              your page on social media
+              Customers can unlock more tries by sharing, following or liking your page on social
+              media
             </p>
           </div>
           <div className="usp">
             <img src={artistEmoji} alt="wave" />
             <img src={wrenchEmoji} alt="wave" />
             <h5>Tailor-made</h5>
-            <p>
-              From colors to size and content, we can customize everything based
-              on your need.
-            </p>
+            <p>From colors to size and content, we can customize everything based on your need.</p>
           </div>
         </div>
 
@@ -243,11 +246,11 @@ class App extends Component {
         <Contact />
 
         {popupVisible === true && (
-        <Popup
-          onClose={() => this.hidePopup()}
-          content={QUESTIONS[activeQuestionNum]}
-          background={BACKGROUNDS[activeQuestionNum]}
-        />
+          <Popup
+            onClose={() => this.hidePopup()}
+            content={QUESTIONS[activeQuestionNum]}
+            background={BACKGROUNDS[activeQuestionNum]}
+          />
         )}
       </div>
     );
