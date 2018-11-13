@@ -68,9 +68,9 @@ class Popup extends Component {
                     You get 10% off!
                     <img src={partyEmoji} className="emoji" />
                   </h4>
-                  <p>Well not really, but it does work if it's integrated on your website!</p>
-
                   <img src="https://media.giphy.com/media/AszIaSlJKPRX4j2zqP/giphy.gif" alt="gif" />
+
+                  <p>Well not really, but it does work if it's integrated on your website!</p>
 
                   <div className="popupBtns">
                     <Link
@@ -100,9 +100,9 @@ class Popup extends Component {
                   <h4 className="message">
                     Sorry, the answer you gave was wrong <img src={sadEmoji} className="emoji" />
                   </h4>
-                  <p>Luckily you can try again unlimited times for now :)</p>
-
                   <img src="https://media.giphy.com/media/yoJC2Olx0ekMy2nX7W/giphy.gif" alt="gif" />
+
+                  <p>Luckily you can try again unlimited times for now :)</p>
 
                   <div className="popupBtns">
                     <Link
@@ -142,9 +142,9 @@ class Popup extends Component {
             {seconds >= maxSeconds ? (
               <div className="notime">
                 <h4 className="message">Oops, you have to answer within the time limit.</h4>
-                <p>But don’t worry, for now you can try as many times as you want :)</p>
-
                 <img src="https://media.giphy.com/media/xUySTEJYS5F1Cayg92/giphy.gif" alt="gif" />
+
+                <p>But don’t worry, for now you can try as many times as you want :)</p>
 
                 <div className="popupBtns">
                   <Link

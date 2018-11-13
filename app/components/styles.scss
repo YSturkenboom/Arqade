@@ -153,6 +153,9 @@ $desktop-width: 1024px;
 
       @include max-xs {
         font-size: 16px;
+        margin-top: 15px;
+        line-height: 2em;
+        opacity: 1;
       }
     }
 
@@ -185,7 +188,7 @@ $desktop-width: 1024px;
         }
       }
       @include max-xs {
-        font-size: 30px;
+        font-size: 35px;
         margin-left: 0;
         margin-right: 0;
       }
@@ -202,7 +205,7 @@ $desktop-width: 1024px;
     justify-content: center;
 
     @include max-xs {
-      flex-direction: column;
+      // flex-direction: column;
       margin-bottom: 0;
     }
 
@@ -221,10 +224,10 @@ $desktop-width: 1024px;
       text-align: center;
 
       @include max-xs {
-        padding: 20px 40px;
-        font-size: 14px;
-        width: 200px;
-        margin: 15px auto;
+        font-size: 15px;
+        margin: 0 auto;
+        padding: 9px 14px;
+        flex-basis: 33%;
       }
     }
 
@@ -300,10 +303,11 @@ $desktop-width: 1024px;
         opacity: 0.7;
         max-width: 1000px;
         margin: 0 auto;
+        margin-top: 20px;
         line-height: 35px;
 
         @include max-xs {
-          margin-top: 0;
+          margin-top: 20px;
           width: 80%;
           font-size: 18px;
         }
@@ -543,6 +547,11 @@ body {
   font-family: Cera-Regular, sans-serif;
   margin-bottom: 20px;
 
+  @include max-xs {
+    margin-top: -45px;
+    margin-bottom: 0;
+  }
+
   .bar {
     border-top: 1px solid #888;
     flex-grow: 1;
@@ -551,6 +560,10 @@ body {
     display: inline-block;
     margin: 0 20px;
     margin-top: 10px;
+
+    @include max-xs {
+      margin-top: 8px;
+    }
   }
 
   .bar-text {
@@ -558,6 +571,10 @@ body {
     flex-shrink: 0;
     color: #888;
     font-size: 20px;
+
+    @include max-xs {
+      font-size: 12px;
+    }
   }
 }
 
