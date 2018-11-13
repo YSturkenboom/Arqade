@@ -217,8 +217,8 @@ class App extends Component {
         <div className="landingpage__usps">
           <Element name="why" />
           <div className="usp">
-            <img src={chartEmoji} alt="wave" />
             <img src={laughingEmoji} alt="wave" />
+            <img src={chartEmoji} alt="wave" />
             <h5>Fun increases conversion</h5>
             <p>
               Studies have shown <span className="pulse">fun</span> increases conversion. Why not

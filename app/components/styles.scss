@@ -63,6 +63,12 @@ $border-radius: 2.2px;
   }
 }
 
+@mixin max-sm {
+  @media (max-width: $max-width-sm) {
+    @content;
+  }
+}
+
 $mobile-width: 425px;
 $tablet-width: 768px;
 $desktop-width: 1024px;
@@ -104,6 +110,10 @@ $desktop-width: 1024px;
         cubic-bezier(0.215, 0.61, 0.355, 1) both;
       animation: tracking-in-expand 3s cubic-bezier(0.215, 0.61, 0.355, 1) both;
       display: inline;
+
+      @include max-sm {
+        text-align: center;
+      }
 
       @include max-xs {
         font-size: 23px;
@@ -223,7 +233,7 @@ $desktop-width: 1024px;
 
     a {
       padding: 15px 20px;
-      margin: 0 20px;
+      margin: auto 20px;
       font-family: Cera-Medium, sans-serif;
       font-size: 18px;
       cursor: pointer;
@@ -247,6 +257,7 @@ $desktop-width: 1024px;
       background: black;
       color: white !important;
       transition: 0.5s all;
+      height: 2.5em;
 
       &:hover {
         background: transparent;
@@ -261,6 +272,7 @@ $desktop-width: 1024px;
       border: 1px solid black;
       color: black !important;
       transition: 0.5s all;
+            height: 2.5em;
 
       &:hover {
         background: black;
@@ -333,10 +345,15 @@ $desktop-width: 1024px;
         text-align: left;
         line-height: 35px;
 
+        @include max-sm {
+          text-align: center;
+        }
+
         @include max-xs {
           width: 80%;
           font-size: 18px;
           text-align: center;
+          margin-top: -30px;
         }
       }
 
@@ -350,6 +367,10 @@ $desktop-width: 1024px;
         margin-bottom: 0;
         height: 2em;
         text-align: left;
+
+        @include max-sm {
+          text-align: center;
+        }
 
         @include max-xs {
           font-size: 24px;
@@ -594,7 +615,7 @@ body {
     width: 10px;
     display: inline-block;
     margin: 0 20px;
-    margin-top: 18px;
+    margin-top: 14px;
 
     @include max-xs {
       margin: 0;

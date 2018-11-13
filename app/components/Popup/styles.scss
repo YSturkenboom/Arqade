@@ -36,6 +36,7 @@ $max-width-sm: 1040px;
   border-radius: 5px;
   background-size: cover;
   background-position: center;
+  min-height: 600px;
 
   @include max-xs {
     padding: 5px;
@@ -159,7 +160,7 @@ $max-width-sm: 1040px;
       margin-top: 80px;
 
       @include max-xs {
-        width: 200px;
+        width: 250px;
         margin-bottom: -20px;
       }
     }
@@ -233,7 +234,7 @@ h4 {
   text-align: center;
   margin: 50px;
   font-family: Cera-Bold, sans-serif;
-  font-size: 50px;
+  font-size: 38px;
   color: #000;
   letter-spacing: 0;
   margin-bottom: 150px;
